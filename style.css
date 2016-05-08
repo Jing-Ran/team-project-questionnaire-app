@@ -8,6 +8,12 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  /* Jing: add required font-size and font-family */
+  font-size: 16px;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  /* jing: add a background for .disabled test */
+  background: url("https://static.pexels.com/photos/19068/mirror-light-black-glass.jpg") repeat-y;
+  background-size: 100%;
 }
 
 .questionnaire * {
@@ -64,12 +70,28 @@ body {
   padding: 12px;
   border: 1px solid rgba(0, 0, 0, 0);
   border-bottom: 3px solid #5E35B1;
+  /*Jing: add font-size for answers fields*/
+  font-size: 16px;
 }
 
 .questionnaire input[class*="answer"]:focus,
 .questionnaire textarea:focus {
   border: 1px solid #5E35B1;
   border-bottom: 3px solid #5E35B1;
+}
+
+
+/* Jing: style placeholder' font-size */
+.questionnaire input::-webkit-input-placeholder {
+  font-size: 16px;
+}
+
+.questionnaire input::-moz-placeholder {
+  font-size: 16px;
+}
+
+.questionnaire input:-ms-input-placeholder {
+  font-size: 16px;
 }
 
 .questionnaire .required::after {
@@ -83,7 +105,9 @@ body {
   margin: 35px 0;
 }
 
-.questionnaire .button {
+/* Jing: add .submit here for common styles, different styles are overridden below; */
+.questionnaire .button,
+.submit {
   width: 30%;
   max-width: 200px;
   min-width: 50px;
@@ -105,7 +129,9 @@ body {
 
 /* vojislav: question text needs to be emphasized */
 
-.questionnaire .question p {
+/* jing: removed the .question class in front of p. p in the last card is not under .quesition, and all p w/out any class under .questionnaire have the same basic style. The rest p who have their classes are not affected by this change.*/
+
+.questionnaire p {
   font-weight: bold;
 }
 
@@ -115,8 +141,39 @@ body {
 .questionnaire p.description {
   font-weight: normal;
   color: #555;
+  /* Jing: add a smaller font-size, font-size of the .description in the example looks smaller than the .question */
+  font-size: 14px;
 }
 
 .questionnaire div img {
   width: 100%;
+}
+
+/* Jing: add sytles for card 3 and 5 */
+.questionnaire .disabled {
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.questionnaire .disabled .title {
+  color: rgba(0,0,0,0.4);
+}
+
+.questionnaire .multiple-choice {
+  display: block;
+  margin: 20px 0;
+}
+
+.questionnaire .dropdown {
+  width: 100%;
+  font-size: 16px;
+}
+
+.questionnaire .submit {
+  background-color: #C2185B;
+}
+
+.questionnaire .submit:hover {
+  background-color: #EC407A;
+  cursor: pointer;
 }
