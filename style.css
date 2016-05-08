@@ -1,1 +1,122 @@
+body {
+  margin: 0;
+  /* vojislav: fixed misspelled background-image property name :) */
+  background-image: url("images/leaf.jpg");
+  background-image: url("images/leaves.jpg");
+  background-image: url("images/letters.jpg");
+  background-image: url("images/sand.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
+.questionnaire * {
+  box-sizing: border-box;
+}
+
+.questionnaire *:focus {
+  outline: none;
+}
+
+.questionnaire {
+  width: 80%;
+  max-width: 800px;
+  min-width: 400px;
+  /* vojislav: removed top and bottom margin and placed it to .questionnaire-card */
+  margin: auto;
+  font-size: 16px;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.questionnaire .questionnaire-card {
+  /* vojislav: added this margin to separate question cards */
+  margin: 100px 0;
+  /* vojislav: form cards were transparent so the background was seen through them */
+  background-color: #fafafa;
+  padding: 50px 80px 20px;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.questionnaire .title {
+  color: #5E35B1;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 20px;
+  /* vojislav: this font is lighter weight */
+  font-weight: lighter;
+}
+
+/* vojislav: title section need to have larger fonts size */
+
+.questionnaire h1.title {
+  font-size: 40px;
+}
+
+.questionnaire h2.title {
+  font-size: 35px;
+}
+
+.questionnaire input[class*="answer"],
+.questionnaire textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 3px solid #5E35B1;
+}
+
+.questionnaire input[class*="answer"]:focus,
+.questionnaire textarea:focus {
+  border: 1px solid #5E35B1;
+  border-bottom: 3px solid #5E35B1;
+}
+
+.questionnaire .required::after {
+  content: "REQUIRED";
+  color: #B71C1C;
+  font: bold 14px "Roboto", "Helvetica Neue", sans-serif;
+  float: right;
+}
+
+.questionnaire .questionnaire-card div {
+  margin: 35px 0;
+}
+
+.questionnaire .button {
+  width: 30%;
+  max-width: 200px;
+  min-width: 50px;
+  border: none;
+  background-color: #5E35B1;
+  color: #fff;
+  margin: 15px auto;
+  display: block;
+  /* vojislav: removed padding and added center alignment so when the width is smaller the text is still centered */
+  padding: 15px 0;
+  text-align: center;
+}
+
+.questionnaire .button:hover {
+  background-color: #7E57C2;
+  cursor: pointer;
+}
+
+
+/* vojislav: question text needs to be emphasized */
+
+.questionnaire .question p {
+  font-weight: bold;
+}
+
+
+/* VOJISLAV: STYLES FOR TWO OTHER CARDS */
+
+.questionnaire p.description {
+  font-weight: normal;
+  color: #555;
+}
+
+.questionnaire div img {
+  width: 100%;
+}
