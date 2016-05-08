@@ -1,5 +1,3 @@
-###### [Gruximillian Coursework home](https://github.com/moderndeveloper-students/coursework-Gruximillian) > [Course 6 - Introduction to JavaScript and Modern Web Development](https://github.com/moderndeveloper-students/coursework-Gruximillian/tree/master/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development) > [Chapter 2 - Introduction to CSS](https://github.com/moderndeveloper-students/coursework-Gruximillian/tree/master/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development/Chapter-02-Introduction-to-CSS) > [Team Project 2](https://github.com/moderndeveloper-students/coursework-Gruximillian/tree/master/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development/Chapter-02-Introduction-to-CSS/team-project-2) > entry-1--the-`<i>`-element.md
-
 # The `<i>` element
 
 Type: ***HTML element.***

@@ -1,5 +1,3 @@
-###### [Gruximillian Coursework home](https://github.com/moderndeveloper-students/coursework-Gruximillian) > [Course 6 - Introduction to JavaScript and Modern Web Development](https://github.com/moderndeveloper-students/coursework-Gruximillian/tree/master/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development) > [Chapter 2 - Introduction to CSS](https://github.com/moderndeveloper-students/coursework-Gruximillian/tree/master/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development/Chapter-02-Introduction-to-CSS) > [Team Project 2](https://github.com/moderndeveloper-students/coursework-Gruximillian/tree/master/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development/Chapter-02-Introduction-to-CSS/team-project-2) > entry-2--the-`[attribute*=value]`.md
-
 # The `[attribute*=value]` selector
 
 Type: ***CSS selector.***
@@ -59,11 +57,13 @@ This will select all input elements that have type attribute set to "checkbox" a
 
 ## Example 3 - Complex
 
-This rule will apply to all `a` elements whose `href` attribute contains `github.com` pattern and are located in the element with class `.sidebar`:
+This rule will apply to all `a` elements whose `href` attribute contains `github.com` pattern and are located in the element with class `.sidebar`. It will add pseudo element `::before` to the link with the icon image as its content:
 
 ```css
-  .sidebar a[href*="github.com"] {
-    color: green;
+  .sidebar a[href*="github.com"]::before {
+    content: url("images/github-logo.jpg");
+    margin: 5px;
+    vertical-align: middle;
   }
 ```
 
