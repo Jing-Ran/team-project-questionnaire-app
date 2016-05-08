@@ -41,7 +41,6 @@
       <div>
         <input type="button" class="button" name="continue-btn" value="Continue">
       </div>
-
     </fieldset>
 
     <fieldset name="questionnaire-card" class="questionnaire-card">
@@ -78,7 +77,21 @@
       <div>
         <input type="button" class="button" name="continue-btn" value="Continue">
       </div>
+    </fieldset>
 
+<!--Jing: add the third card -->
+    <fieldset name="questionnaire-card" class="questionnaire-card disabled">
+      <h2 class="title">This section is disabled</h2>
+      <div>
+        <label class="question">
+          <p>Question</p>
+          <input type="text" class="short-answer" placeholder="Answer...">
+        </label>
+      </div>
+
+      <div>
+        <input type="button" class="button" name="continue-btn" value="Continue">
+      </div>
     </fieldset>
 
     <fieldset name="questionnaire-card" class="questionnaire-card">
@@ -119,7 +132,44 @@
       <div>
         <input type="button" class="button" name="continue-btn" value="Continue">
       </div>
+    </fieldset>
 
+<!-- jing: add the last card -->
+    <fieldset name="questionnaire-card" class="questionnaire-card">
+      <h2 class="title">Section Title w/ form elements</h2>
+      <div>
+        <p class="description">Description paragraph....</p>
+      </div>
+
+      <div>
+        <p>Multiple Choice w/ Radio Inputs</p>
+        <label class="multiple-choice"><input type="radio" name="radio-option" value="option1" checked> This is option 1</label>
+        <label class="multiple-choice"><input type="radio" name="radio-option" value="option2"> This is option 2</label>
+        <label class="multiple-choice"><input type="radio" name="radio-option" value="option3"> This is option 3</label>
+      </div>
+
+      <div>
+        <p>Multiple Choice w/ Checkbox Inputs</p>
+        <label class="multiple-choice"><input type="checkbox" name="checkbox-option" value="option1" checked> This is option 1</label>
+        <label class="multiple-choice"><input type="checkbox" name="checkbox-option" value="option2"> This is option 2</label>
+        <label class="multiple-choice"><input type="checkbox" name="checkbox-option" value="option3"> This is option 3</label>
+      </div>
+
+      <div>
+        <label class="question">
+          <p class="required">Dropdown Select from the list below:</p>
+          <p class="description">Description paragraph....</p>
+          <select class="dropdown" name="dropdown">
+            <option value="option1" selected>Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </label>
+      </div>
+
+      <div>
+        <input type="submit" class="submit" name="submit-btn" value="Submit">
+      </div>
     </fieldset>
   </form>
 
