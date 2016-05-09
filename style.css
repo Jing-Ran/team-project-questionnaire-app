@@ -76,7 +76,8 @@ body {
   /* vojislav: this font size is relative to the font size set for .questionnaie class */
   font-size: 1.15em;
   /* vojislav: I left this to disscuss after you see the result without it */
-  /*letter-spacing: 0.5px; */
+  /* jing: letter spacing is nesessary here */
+  letter-spacing: 0.5px; 
 }
 
 .questionnaire textarea {
@@ -98,8 +99,9 @@ body {
   float: right;
 }
 
+/* jing: adjust margin top and bottom, make them larger; */
 .questionnaire .questionnaire-card div {
-  margin: 35px 0;
+  margin: 45px 0;
 }
 
 .questionnaire .button,
@@ -138,11 +140,18 @@ body {
   font-size: 0.85em;
 }
 
+/* jing: margin between .description and .title is less than the margin between */ 
+/* .description and the content below. The shrinked margin doesn't affect the margin between */
+/* .question and .description */
+.questionnaire .title + div > .description {
+  margin-top: -20px;
+}
+
 .questionnaire div img {
   width: 100%;
 }
 
-/* Jing: add sytles for card 3 and 5 */
+/* Jing: sytles for card 3 and 5 */
 .questionnaire .disabled {
   pointer-events: none;
   opacity: 0.85;
@@ -152,9 +161,10 @@ body {
   color: rgba(0,0,0,0.4);
 }
 
+/* jing: adjust margin in bewteen; */
 .questionnaire .multiple-choice {
   display: block;
-  margin: 20px 0;
+  margin: 32px 0;
 }
 
 .questionnaire .dropdown {
@@ -163,7 +173,7 @@ body {
   font-size: 1em;
   font-family: inherit;
   /* vojislav: set background, border and padding for select field */
-  background-color: transparent;
+  /* jing: delete bg transparent. MD's is default color; */
   padding: 2px;
   border: 1px solid #777;
 }
