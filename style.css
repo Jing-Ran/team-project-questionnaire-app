@@ -173,9 +173,15 @@ body {
   font-size: 1em;
   font-family: inherit;
   /* vojislav: set background, border and padding for select field */
-  /* jing: delete bg transparent. MD's is default color; */
   padding: 2px;
-  border: 1px solid #777;
+  /* jing: if border is styled, the bg color will be changed and different from MD's. */
+  /* So change bg from transparent to white */
+  /* change border/outline color to make it looks similar to the example */
+  /* Chrome's default border is round. If modify border, the arrow on the right will disappear.*/
+  /* So use outline here */
+  border: 0;
+  outline: 1px solid #9E9E9E;
+  background-color: #fff;
 }
 
 .questionnaire .submit {
