@@ -1,10 +1,11 @@
 body {
   margin: 0;
   /* vojislav: fixed misspelled background-image property name :) */
+  /* jing: I comment this images for now since we decided to use the image below;
   background-image: url("images/leaf.jpg");
   background-image: url("images/leaves.jpg");
   background-image: url("images/letters.jpg");
-  background-image: url("images/sand.jpg");
+  background-image: url("images/sand.jpg");*/
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -12,8 +13,8 @@ body {
   font-size: 16px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   /* jing: add a background for .disabled test */
-  background: url("https://static.pexels.com/photos/19068/mirror-light-black-glass.jpg") repeat-y;
-  background-size: 100%;
+  /* jing: modify background image */
+  background-image: url("https://static.pexels.com/photos/19068/mirror-light-black-glass.jpg");
 }
 
 .questionnaire * {
