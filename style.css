@@ -1,20 +1,18 @@
 body {
   margin: 0;
-  /* vojislav: fixed misspelled background-image property name :) */
-  /* jing: I comment this images for now since we decided to use the image below;
-  background-image: url("images/leaf.jpg");
+  /* background-image: url("images/leaf.jpg");
   background-image: url("images/leaves.jpg");
   background-image: url("images/letters.jpg");
   background-image: url("images/sand.jpg");*/
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  /* Jing: add required font-size and font-family */
   font-size: 16px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
-  /* jing: add a background for .disabled test */
-  /* jing: modify background image */
-  background-image: url("https://static.pexels.com/photos/19068/mirror-light-black-glass.jpg");
+  /* vojislav: changed url to load local image */
+  background-image: url("images/mirror-light-black-glass.jpg");
+  /* vojislav: added background color when the image doesn't load */
+  background-color: #222;
 }
 
 .questionnaire * {
@@ -29,20 +27,21 @@ body {
   width: 80%;
   max-width: 800px;
   min-width: 400px;
-  /* vojislav: removed top and bottom margin and placed it to .questionnaire-card */
   margin: auto;
-  /* Vojislav: change base font size for the form and add letter spacing */
-  font-size: 1.35rem;
-  letter-spacing: 1px;
+  /* vojislav: reduced font size, this will be the base font size for the form */
+  /* elements in the form will have their font sizes set in 'em' units to be */
+  /* relative to this, base font size */
+  font-size: 1.3rem;
+  /* vojislav: removed letter spacing, it appears that in firefox letters are */
+  /* more condensed than in chrome, that was the reason for adding spacing */
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
 .questionnaire .questionnaire-card {
-  /* vojislav: added this margin to separate question cards */
   margin: 100px 0;
-  /* vojislav: form cards were transparent so the background was seen through them */
   background-color: #fafafa;
-  padding: 50px 80px 20px;
+  /* vojsialv: changed padding for lef and right, the example has larger padding */
+  padding: 50px 100px 20px;
   width: 100%;
   border-radius: 3px;
   border: none;
@@ -53,11 +52,8 @@ body {
   color: #5E35B1;
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 20px;
-  /* vojislav: this font is lighter weight */
   font-weight: lighter;
 }
-
-/* vojislav: title section need to have larger fonts size */
 
 .questionnaire h1.title {
   font-size: 40px;
@@ -70,21 +66,22 @@ body {
 .questionnaire input[class*="answer"],
 .questionnaire textarea {
   width: 100%;
-  padding: 12px;
+  /* vojislav: reduced padding size a bit */
+  padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0);
   border-bottom: 3px solid #5E35B1;
 }
 
-/* Vojislav: change font size for inputs and add letter spacing */
 .questionnaire input[class*="answer"] {
-  /*Jing: add font-size for answers fields*/
-  font-size: 1.5rem;
-  letter-spacing: inherit;
+  /* vojislav: this font size is relative to the font size set for .questionnaie class */
+  font-size: 1.15em;
+  /* vojislav: I left this to disscuss after you see the result without it */
+  /*letter-spacing: 0.5px; */
 }
 
-/* Vojislav: change font size for textarea and set font inheritance */
 .questionnaire textarea {
-  font-size: 1.35rem;
+  /* vojislav: this font size is relative to the font size set for .questionnaie class */
+  font-size: 1em;
   font-family: inherit;
 }
 
@@ -93,21 +90,6 @@ body {
   border: 1px solid #5E35B1;
   border-bottom: 3px solid #5E35B1;
 }
-
-/* vojislav: these style are no longer needed, inheritance applies them */
-
-/* Jing: style placeholder' font-size */
-/*.questionnaire input::-webkit-input-placeholder {
-  font-size: inherit;
-}
-
-.questionnaire input::-moz-placeholder {
-  font-size: inherit;
-}
-
-.questionnaire input:-ms-input-placeholder {
-  font-size: inherit;
-}*/
 
 .questionnaire .required::after {
   content: "REQUIRED";
@@ -120,20 +102,21 @@ body {
   margin: 35px 0;
 }
 
-/* Jing: add .submit here for common styles, different styles are overridden below; */
 .questionnaire .button,
 .submit {
-  width: 30%;
-  max-width: 200px;
+  /* vojislav: increased width for buttons */
+  width: 35%;
+  max-width: 230px;
   min-width: 50px;
   border: none;
   background-color: #5E35B1;
   color: #fff;
   margin: 15px auto;
   display: block;
-  /* vojislav: removed padding and added center alignment so when the width is smaller the text is still centered */
   padding: 15px 0;
   text-align: center;
+  /* vojislav: set font-size */
+  font-size: 0.85em;
 }
 
 .questionnaire .button:hover {
@@ -141,27 +124,18 @@ body {
   cursor: pointer;
 }
 
-
-/* vojislav: question text needs to be emphasized */
-
-/* jing: removed the .question class in front of p. p in the last card is not under .quesition, and all p w/out any class under .questionnaire have the same basic style. The rest p who have their classes are not affected by this change.*/
-
-/* vojislav: added 'strong' element to make text more bold */
 .questionnaire p,
 .questionnaire strong {
   font-weight: bold;
 }
-
 
 /* VOJISLAV: STYLES FOR TWO OTHER CARDS */
 
 .questionnaire p.description {
   font-weight: normal;
   color: #777;
-  /* Jing: add a smaller font-size, font-size of the .description in the example looks smaller than the .question */
-  /* Vojislav: adjust font size and letter spacing */
-  font-size: 1.1rem;
-  letter-spacing: normal;
+  /* vojislav: this font size is relative to the font size set for .questionnaie class */
+  font-size: 0.85em;
 }
 
 .questionnaire div img {
@@ -185,8 +159,13 @@ body {
 
 .questionnaire .dropdown {
   width: 100%;
-  font-size: 1.35rem;
+  /* vojislav: this font size is relative to the font size set for .questionnaie class */
+  font-size: 1em;
   font-family: inherit;
+  /* vojislav: set background, border and padding for select field */
+  background-color: transparent;
+  padding: 2px;
+  border: 1px solid #777;
 }
 
 .questionnaire .submit {
