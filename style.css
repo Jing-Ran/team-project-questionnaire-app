@@ -155,9 +155,28 @@ body {
 }
 
 /* Jing: sytles for card 3 and 5 */
+/* vojislav: these rules are not required now */
+/*
 .questionnaire .disabled {
   pointer-events: none;
   opacity: 0.85;
+}
+*/
+
+/* vojislav: add disabled card styles */
+
+.questionnaire .disabled {
+  position: relative;
+}
+
+.questionnaire .disabled::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .questionnaire .disabled .title {
