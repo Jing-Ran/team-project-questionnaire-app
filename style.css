@@ -1,10 +1,6 @@
 body {
   margin: 0;
   background-color: #222;
-  /* background-image: url("images/leaf.jpg");
-  background-image: url("images/leaves.jpg");
-  background-image: url("images/letters.jpg");
-  background-image: url("images/sand.jpg");*/
   background-image: url("images/mirror-light-black-glass.jpg");
   background-position: center;
   background-size: cover;
@@ -26,9 +22,6 @@ body {
   max-width: 800px;
   min-width: 400px;
   margin: auto;
-  /* vojislav: reduced font size, this will be the base font size for the form */
-  /* elements in the form will have their font sizes set in 'em' units to be */
-  /* relative to this, base font size */
   font-size: 1.3rem;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
@@ -50,7 +43,6 @@ body {
   font-weight: lighter;
 }
 
-/* vojislav: changed font sizes to 'em' units */
 .questionnaire h1.title {
   font-size: 1.92em;
 }
@@ -63,21 +55,16 @@ body {
 .questionnaire textarea {
   width: 100%;
   padding: 10px;
-  /* vojislav: changed border width to 1px */
   border: 1px solid rgba(0, 0, 0, 0);
   border-bottom: 3px solid #5E35B1;
 }
 
 .questionnaire input[class*="answer"] {
-  /* vojislav: this font size is relative to the font size set for .questionnaie class */
   font-size: 1.15em;
-  /* vojislav: I left this to disscuss after you see the result without it */
-  /* jing: letter spacing is nesessary here */
   letter-spacing: 0.5px;
 }
 
 .questionnaire textarea {
-  /* vojislav: this font size is relative to the font size set for .questionnaie class */
   font-size: 1em;
   font-family: inherit;
 }
@@ -125,18 +112,12 @@ body {
   font-weight: bold;
 }
 
-/* VOJISLAV: STYLES FOR TWO OTHER CARDS */
-
 .questionnaire p.description {
   font-weight: normal;
   color: #777;
-  /* vojislav: this font size is relative to the font size set for .questionnaie class */
   font-size: 0.85em;
 }
 
-/* jing: margin between .description and .title is less than the margin between */
-/* .description and the content below. The shrinked margin doesn't affect the margin between */
-/* .question and .description */
 .questionnaire .title + div > .description {
   margin-top: -20px;
 }
@@ -144,19 +125,6 @@ body {
 .questionnaire div img {
   width: 100%;
 }
-
-/* Jing: sytles for card 3 and 5 */
-
-/* vojislav: these rules are not required now */
-
-/*
-.questionnaire .disabled {
-  pointer-events: none;
-  opacity: 0.85;
-}
-*/
-
-/* vojislav: add disabled card styles */
 
 .questionnaire .disabled {
   position: relative;
@@ -176,7 +144,6 @@ body {
   color: rgba(0,0,0,0.4);
 }
 
-/* jing: adjust margin in bewteen; */
 .questionnaire .multiple-choice {
   display: block;
   margin: 32px 0;
@@ -184,15 +151,9 @@ body {
 
 .questionnaire .dropdown {
   width: 100%;
-  /* vojislav: this font size is relative to the font size set for .questionnaie class */
   font-size: 1em;
   font-family: inherit;
   padding: 2px;
-  /* jing: if border is styled, the bg color will be changed and different from MD's. */
-  /* So change bg from transparent to white */
-  /* change border/outline color to make it looks similar to the example */
-  /* Chrome's default border is round. If modify border, the arrow on the right will disappear.*/
-  /* So use outline here */
   border: 0;
   outline: 1px solid #9E9E9E;
   background-color: #fff;
