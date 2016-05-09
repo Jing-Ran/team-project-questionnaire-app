@@ -42,6 +42,7 @@ In a browser that fully support this attribute:
 			<style scoped>
 				p { color: yellow;}
 			</style>
+			<p>This is yellow</p>
 		</div>
 		
 The `h1` heading and the first `p` should be in black. The second `p` in the `div` should be in yellow. The `style` tag styles its parent element `div`. 
