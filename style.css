@@ -1,18 +1,16 @@
 body {
   margin: 0;
+  background-color: #222;
   /* background-image: url("images/leaf.jpg");
   background-image: url("images/leaves.jpg");
   background-image: url("images/letters.jpg");
   background-image: url("images/sand.jpg");*/
+  background-image: url("images/mirror-light-black-glass.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   font-size: 16px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
-  /* vojislav: changed url to load local image */
-  background-image: url("images/mirror-light-black-glass.jpg");
-  /* vojislav: added background color when the image doesn't load */
-  background-color: #222;
 }
 
 .questionnaire * {
@@ -32,15 +30,12 @@ body {
   /* elements in the form will have their font sizes set in 'em' units to be */
   /* relative to this, base font size */
   font-size: 1.3rem;
-  /* vojislav: removed letter spacing, it appears that in firefox letters are */
-  /* more condensed than in chrome, that was the reason for adding spacing */
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
 .questionnaire .questionnaire-card {
   margin: 100px 0;
   background-color: #fafafa;
-  /* vojsialv: changed padding for lef and right, the example has larger padding */
   padding: 50px 100px 20px;
   width: 100%;
   border-radius: 3px;
@@ -67,7 +62,6 @@ body {
 .questionnaire input[class*="answer"],
 .questionnaire textarea {
   width: 100%;
-  /* vojislav: reduced padding size a bit */
   padding: 10px;
   /* vojislav: changed border width to 1px */
   border: 1px solid rgba(0, 0, 0, 0);
@@ -102,14 +96,12 @@ body {
   float: right;
 }
 
-/* jing: adjust margin top and bottom, make them larger; */
 .questionnaire .questionnaire-card div {
   margin: 45px 0;
 }
 
 .questionnaire .button,
 .submit {
-  /* vojislav: increased width for buttons */
   width: 35%;
   max-width: 230px;
   min-width: 50px;
@@ -120,7 +112,6 @@ body {
   display: block;
   padding: 15px 0;
   text-align: center;
-  /* vojislav: set font-size */
   font-size: 0.85em;
 }
 
@@ -155,7 +146,9 @@ body {
 }
 
 /* Jing: sytles for card 3 and 5 */
+
 /* vojislav: these rules are not required now */
+
 /*
 .questionnaire .disabled {
   pointer-events: none;
@@ -194,7 +187,6 @@ body {
   /* vojislav: this font size is relative to the font size set for .questionnaie class */
   font-size: 1em;
   font-family: inherit;
-  /* vojislav: set background, border and padding for select field */
   padding: 2px;
   /* jing: if border is styled, the bg color will be changed and different from MD's. */
   /* So change bg from transparent to white */
