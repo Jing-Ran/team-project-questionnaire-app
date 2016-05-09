@@ -50,17 +50,18 @@ body {
 
 .questionnaire .title {
   color: #5E35B1;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 20px;
   font-weight: lighter;
 }
 
+/* vojislav: changed font sizes to 'em' units */
 .questionnaire h1.title {
-  font-size: 40px;
+  font-size: 1.92em;
 }
 
 .questionnaire h2.title {
-  font-size: 35px;
+  font-size: 1.68em;
 }
 
 .questionnaire input[class*="answer"],
@@ -68,6 +69,7 @@ body {
   width: 100%;
   /* vojislav: reduced padding size a bit */
   padding: 10px;
+  /* vojislav: changed border width to 1px */
   border: 1px solid rgba(0, 0, 0, 0);
   border-bottom: 3px solid #5E35B1;
 }
@@ -77,7 +79,7 @@ body {
   font-size: 1.15em;
   /* vojislav: I left this to disscuss after you see the result without it */
   /* jing: letter spacing is nesessary here */
-  letter-spacing: 0.5px; 
+  letter-spacing: 0.5px;
 }
 
 .questionnaire textarea {
@@ -95,7 +97,8 @@ body {
 .questionnaire .required::after {
   content: "REQUIRED";
   color: #B71C1C;
-  font: bold 14px "Roboto", "Helvetica Neue", sans-serif;
+  /* vojislav: changed font size to 'em' units */
+  font: bold 0.67em "Roboto", "Helvetica Neue", sans-serif;
   float: right;
 }
 
@@ -140,7 +143,7 @@ body {
   font-size: 0.85em;
 }
 
-/* jing: margin between .description and .title is less than the margin between */ 
+/* jing: margin between .description and .title is less than the margin between */
 /* .description and the content below. The shrinked margin doesn't affect the margin between */
 /* .question and .description */
 .questionnaire .title + div > .description {
