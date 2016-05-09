@@ -4,7 +4,7 @@ Type: ***JavaScript method (function).***
 
 `Array.prototype.lastIndexOf()` is a function that is defined on the `Array` object prototype. That means that every array created in the javascript program will have access to this function. The specific name for functions defined only for certain types of objects is a 'method', so in the rest of this article we will use term 'method' to follow the convention.
 
-A given array element may appear multiple times in the array, and the `lastIndexOf` method will find the last position in the array where the element appears. `lastIndexOf` will return the numeric value of the index for the matched element. If the element is not found in the array the this method returns `-1`.
+A given array element may appear multiple times in the array, and the `lastIndexOf` method will find the last position in the array where the element appears. `lastIndexOf` will return the numeric value of the index for the matched element. If the element is not found in the array then this method returns `-1`.
 
 When `lastIndexOf` searches for the given element, it does that from the end of the array unless it is given a different starting point through a parameter.
 
@@ -61,7 +61,7 @@ Finding last positions of numbers in the array.
 
     lastFoundOnIndex = numbersArray.lastIndexOf(7, 3);
     console.log('Number 7 is last found on index ', lastFoundOnIndex);
-    // Number 2 is last found on index -1
+    // Number 7 is last found on index -1
     /* the element is not found */
 ```
 
@@ -124,7 +124,7 @@ If `fromIndex` has value that will give negative result in calculating the start
 
 ## Example 4 - Complex
 
-In this example the function `isLast` determines if the given item is on the last place in the given array. The function logs to the console if the element is found or not in the array. If it is found, it logs if the element is on the last position in the array or not, and it logs what is that position. In all cases function returns the index at which is the element found. If the element is not found function returns `-1`.
+In this example the function `isLast` determines if the given item is on the last place in the given array. The function logs to the console if the element is found or not in the array. If it is found, it logs if the element is on the last position in the array or not, and it logs what is that position. If the element is not found, function returns `false` and if it is found it returns `true`.
 
 ```javascript
   var numbersArray = [2, 36, 5, 6, 2, 9, 7, 2, 3, 64, 7];    
@@ -136,30 +136,40 @@ In this example the function `isLast` determines if the given item is on the las
     if (lastFoundOnIndex !== -1) {
 
       if (lastFoundOnIndex + 1 === len) {
+
         console.log('Element ' + item + ' is on the last position in the array.');
+        console.log('The last position of element ' + item + ' in the array is ' + lastFoundOnIndex + '.');
+        return true;
+
       } else {
+
         console.log('Element ' + item + ' is not on the last position in the array.');
+        console.log('The last position of element ' + item + ' in the array is ' + lastFoundOnIndex + '.');
+        return false;
+
       }
 
-      console.log('The last position of element ' + item + ' in the array is ' + lastFoundOnIndex + '.');
-
     } else {
-      console.log('The element ' + item + ' does not exist in this array!');
-    }
 
-    return lastFoundOnIndex;
+      console.log('The element ' + item + ' does not exist in this array!');
+      return false;
+
+    }
   }
 
   isLast(8, numbersArray);
   // The number 8 does not exist in this array!
+  // false
 
   isLast(7, numbersArray);
   // Number 7 is on the last position in the array.
   // The last position of number 7 in the array is 10.
+  // true
 
   isLast(64, numbersArray);
   // Number 64 is not on the last position in the array.
   // The last position of number 64 in the array is 9.
+  // false
 ```
 
 ## Special Notes

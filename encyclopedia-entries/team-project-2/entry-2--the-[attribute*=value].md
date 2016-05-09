@@ -2,14 +2,16 @@
 
 Type: ***CSS selector.***
 
-This is a CSS selector that is used to select an element that has an attribute whose value contains certain pattern. The *attribute* part is the name of the elements' attribute, and the *value* part is the pattern that we want to match in the attributes' value. The asterisk sign indicates that we do not want to match the whole value of the elements' attribute, it is enough that the part of the attributes' value matches our pattern.
+This is a CSS selector that is used to select an element that has an attribute whose value contains certain pattern. The *attribute* part is the name of the element's attribute, and the *value* part is the pattern that we want to match in the attribute's value. The asterisk sign indicates that we do not want to match the whole value of the element's attribute, it is enough that the part of the attribute's value matches our pattern.
 
 ## Syntax
 
-This selector is enclosed in square brackets. Inside the brackets the attribute name is provided, followed by the asterisk sign, then the equal sign and at the end is the pattern to match in the attribute:
+This selector is enclosed in square brackets. Inside the brackets the attribute name is provided, followed by the asterisk sign, then the equal sign and at the end is the pattern to match in the attribute. After the selector, the CSS ruleset is given in curly braces:
 
-```
-  [attribute*=value]
+```css
+  [attribute*=value] {
+    /* CSS rules */
+  }
 ```
 
 ### Values
