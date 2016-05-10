@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ccc;
+  font-size: 16px;
+}
+
+body * {
+  font-size: inherit; /* reset all font sizes to 16px */ /* Maybe not needed */
+  /* reset some other styles */
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  color: inherit;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #336633;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #339;
+}
+
+.italic {
+  font-style: italic;
+}
+
+code {
+  font-family: courier, monospace;
+  background-color: #eee;
+  padding: 2px 5px 0;
+  border-radius: 3px;
+}
+
+.article-title {
+  font-size: 2em;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.article-title p {
+  font-size: 1.618em;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 1.6em;
+  margin: 20px 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  min-width: 700px;
+  margin: 0 auto;
+}
+
+ul {
+  margin-left: 50px;
+}
+
+.example p {
+  padding: 30px;
+  background-color: #fff;
+}
