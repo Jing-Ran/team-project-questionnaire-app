@@ -2,7 +2,7 @@
 
 Type: ***HTML element.***
 
-The HTMl `<i>` element is used to represent parts of the text, or range of the text as some would say, that is in some way different from other text. That can be a technical term, a phrase from a foreign language, a thought or names of objects.
+The HTML `<i>` element is used to represent parts of the text, or range of the text as some would say, that is in some way different from other text. That can be a technical term, a phrase from a foreign language, a thought or names of objects.
 
 Text that is enclosed with `<i>` element is generally displayed in italics.
 
@@ -22,7 +22,7 @@ Some elements that should be considered before using `<i>` element are:
 
 ## Syntax
 
-The `<i>` elements has opening and closing tag that surround the part of the text that is to be marked. The syntax looks like this:
+The `<i>` element has opening and closing tag that surrounds the part of the text that is to be marked. The syntax looks like this:
 
 ```
   <i>This text will be set off from the rest of the text... </i>
@@ -30,7 +30,7 @@ The `<i>` elements has opening and closing tag that surround the part of the tex
 
 ### Attributes
 
-The `<i>` elements supports only [global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes), like `class`, `id`, `title`, etc.
+The `<i>` element supports only [global attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes), like `class`, `id`, `title`, etc.
 
 ## Example 1
 
@@ -64,7 +64,7 @@ The phenomenon when you experience events that look like they had happened to yo
 
 ## Example 3 - Complex
 
-Write a introduction to the example, sufficient to explain what the example is showing.
+This example mentions the names of the student teams that work on the same assignment, those team names are displayed in italics by enclosing them with the `<i>` element.
 
 **Code:**
 
@@ -101,7 +101,7 @@ CSS:
 
 **Don't be fooled**
 
-There were [examples](http://getbootstrap.com/2.3.2/base-css.html#icons) and [discussions](http://stackoverflow.com/questions/14815626/what-is-the-proper-use-case-for-html-i-element) on the web where the `<i>` element is used to insert icons on the page. The authors of those websites are using this element because its name resembles most closely the name "icon" and because of its shortness it is handier to use. However, that kind of usage is highly inappropriate and semantically incorrect. Good news are that this practice is becoming less used, and the websites that were using this practice are no longer doing it.
+There were [examples](http://getbootstrap.com/2.3.2/base-css.html#icons) and [discussions](http://stackoverflow.com/questions/14815626/what-is-the-proper-use-case-for-html-i-element) on the web where the `<i>` element is used to insert icons on the page. The authors of those websites are using this element because its name resembles most closely the name "icon" and because of its shortness it is handier to use. However, that kind of usage is highly inappropriate and semantically incorrect. Good news are that this practice is becoming less used, and the websites that were using this practice are now abandoning it.
 
 ___
 
