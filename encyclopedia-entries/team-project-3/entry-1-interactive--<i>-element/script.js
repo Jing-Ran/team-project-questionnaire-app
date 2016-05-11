@@ -1,4 +1,15 @@
 $(document).ready(function () {
+
+  $('.clear-formatting').on('click', function() {
+    var example = $(this).parent().find('.example p')[0],
+        exampleHTML = example.innerHTML;
+    //console.log('Example HTML: ' + exampleHTML);
+
+    exampleHTML  = exampleHTML.split('<i>').join('').split('</i>').join('');
+    //console.log('Cleared HTML: ' + exampleHTML);
+    example.innerHTML = exampleHTML;
+  });
+
   $('.example-selection p').on('mouseup', function() {
     var selection = window.getSelection(),
         selected = selection.toString(),
@@ -10,12 +21,13 @@ $(document).ready(function () {
         replacedHTML;
 
     if (releaseTargetHTML === parentHTML && selected !== '') {
-      /* the selection can be italicized */
+      // the selection can be italicized
 
       $(document).on('keydown', function(e) {
         if (e.which === 17) {
           $(document).on('keydown', function(e) {
-            // in firefox, 'Ctrl + i' opens media info window
+            // in firefox, 'Ctrl + i' opens page info window
+            // we want it prevented in this case
             e.preventDefault();
             if (e.which === 73) {
               var before = releaseTargetHTML.substr(0, open),
@@ -30,10 +42,10 @@ $(document).ready(function () {
       });
 
     } else {
-      /* we ended up in the italicized part of the text */
-      /* if we are completely in the part of the text enclosed with <i>       */
-      /* we can remove the <i> from that section, if we are not completely    */
-      /* within <i> element, then do nothing or rather inform user what to do */
+      // we ended up in the italicized part of the text
+      // if we are completely in the part of the text enclosed with <i>
+      // we can remove the <i> from that section, if we are not completel
+      // within <i> element, then do nothing or rather inform user what to do
 
 
     }
