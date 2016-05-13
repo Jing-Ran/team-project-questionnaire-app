@@ -16,7 +16,7 @@ string.substr(startLocation[, length])
 
 #### Start location
 
-This parameter is required. It is the index you would like to start the extraction. The first character's index is 0. If the given start location index is greater than the string's last index, the return value is empty. If a negative number is given, this method extracts characters from the end of the string but doesn't reverse the original string. If IE8 and lower browser is used, they treat the negative start location as 0. 
+This parameter is required. It is the index you would like to start the extraction. The first character's index is 0. If the given start location index is greater than the string's last index, the return value is empty. If a negative number is given, this method extracts characters from the end of the string but doesn't reverse the original string. If IE8 and lower browsers are used, they treat the negative start location as 0. 
 
 #### Length
 
@@ -44,7 +44,7 @@ When the start position is a negative number and its absolute value is greater t
 
 ## Browser Support
 
-When the start position parameter is a non-negative number, this method works for the main browsers: Chrome, Firefox, Safari, IE and Opera. When a negative start position is give, IE8 or lower version browser doesn't support this method. 
+When the start position parameter is a non-negative number, this method works for the main browsers: Chrome, Firefox, Safari, IE and Opera. When a negative start position is given, IE8 or lower version browser doesn't support this method. They simply treat the negative start location as 0.
 
  
 
