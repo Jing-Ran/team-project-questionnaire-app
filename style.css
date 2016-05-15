@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  background-color: #222;
+  background-image: url("images/mirror-light-black-glass.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 16px;
+}
+
+.questionnaire * {
+  box-sizing: border-box;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.questionnaire *:focus {
+  outline: none;
+}
+
+.questionnaire {
+  width: 80%;
+  max-width: 800px;
+  min-width: 400px;
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+.questionnaire .questionnaire-card {
+  margin: 100px 0;
+  background-color: #fafafa;
+  padding: 50px 100px 20px;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.questionnaire .title {
+  color: #5E35B1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 20px;
+  font-weight: lighter;
+}
+
+.questionnaire h1.title {
+  font-size: 1.92em;
+}
+
+.questionnaire h2.title {
+  font-size: 1.68em;
+}
+
+.questionnaire input[class*="answer"],
+.questionnaire textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-bottom: 3px solid #5E35B1;
+  transition: border 0.6s;
+  -webkit-transition: border 0.6s;
+  -moz-transition: border 0.6s;
+  -o-transition: border 0.6s;
+}
+
+.questionnaire input[class*="answer"] {
+  font-size: 1.15em;
+  letter-spacing: 0.5px;
+}
+
+.questionnaire textarea {
+  font-size: 1em;
+}
+
+.questionnaire input[class*="answer"]:focus,
+.questionnaire textarea:focus {
+  border: 1px solid #5E35B1;
+  border-bottom: 3px solid #5E35B1;
+}
+
+.questionnaire .required::after {
+  content: "REQUIRED";
+  color: #B71C1C;
+  font-weight: bold;
+  font-size: 0.67em;
+  float: right;
+}
+
+.questionnaire .questionnaire-card div {
+  margin: 45px 0;
+}
+
+.questionnaire .button,
+.submit {
+  width: 35%;
+  max-width: 230px;
+  min-width: 50px;
+  border: none;
+  background-color: #5E35B1;
+  color: #fff;
+  margin: 15px auto;
+  display: block;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.85em;
+  transition: background-color 0.6s;
+  -webkit-transition: background-color 0.6s;
+  -moz-transition: background-color 0.6s;
+  -o-transition: background-color 0.6s;
+}
+
+.questionnaire .button:hover {
+  background-color: #7E57C2;
+  cursor: pointer;
+}
+
+.questionnaire p,
+.questionnaire strong {
+  font-weight: bold;
+}
+
+.questionnaire p.description {
+  font-weight: normal;
+  color: #777;
+  font-size: 0.85em;
+}
+
+.questionnaire .title + div > .description {
+  margin-top: -20px;
+}
+
+.questionnaire div img {
+  width: 100%;
+}
+
+.questionnaire .disabled {
+  position: relative;
+}
+
+.questionnaire .disabled::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.questionnaire .disabled .title {
+  color: rgba(0,0,0,0.4);
+}
+
+.questionnaire .multiple-choice {
+  display: block;
+  margin: 32px 0;
+}
+
+.questionnaire .dropdown {
+  width: 100%;
+  font-size: 1em;
+  padding: 2px;
+  border: 0;
+  outline: 1px solid #9E9E9E;
+  background-color: #fff;
+}
+
+.questionnaire .submit {
+  background-color: #C2185B;
+}
+
+.questionnaire .submit:hover {
+  background-color: #EC407A;
+  cursor: pointer;
+}
