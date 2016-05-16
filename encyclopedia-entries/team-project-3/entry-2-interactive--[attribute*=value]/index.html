@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Example - [attribute*=value] selector</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="../lib/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="article-title">
+      Encyclopedia Interactive Example
+      <p>[attribute*=value]</p>
+      CSS selector
+    </h1>
+    <h2>Work In Progress...</h2>
+<!--
+    <section class="article-introduction">
+
+      <h2 class="section-title">Brief description</h2>
+
+      <p>The HTML &lt;i&gt; (paragraph) element is used to represent parts of the text that is in some way different from other text. That can be a technical term, a phrase from a foreign language, a thought or names of objects.</p>
+
+      <p>The &lt;i&gt; element should represent the part of the text that has different semantic meaning from the rest of the text and the text enclosed in &lt;i&gt; element may be displayed in italics by the browser.</p>
+
+      <p>The &lt;i&gt; element should only be used when there is not more appropriate semantic element. Some elements that should be considered before using &lt;i&gt; element are:</p>
+
+      <ul>
+        <li>&lt;em&gt; - emphasized text</li>
+        <li>&lt;strong&gt; - important text</li>
+        <li>&lt;mark&gt; - marked/highlighted text</li>
+        <li>&lt;cite&gt; - the title of a work</li>
+        <li>&lt;dfn&gt; - a definition term</li>
+      </ul>
+
+      <p>Read more about the &lt;i&gt; element in this article: <a href="#encyclopedia-article-link">The &lt;i&gt; Element</a></p>
+
+    </section>
+-->
+    <section class="interactive-example">
+
+      <h2 class="section-title exercise-title">Example</h2>
+
+      <p>Select the attribute and its value form the dropdown lists to create a css rulesets that will be applied to the text:</p>
+
+      <div title="button-reset" class="button reset">Reset styles</div>
+
+      <section id="selector-editor">
+        <p>Normal link styles:</p>
+        <select id="attribute" name="attribute">
+          <option value="class" selected>class</option>
+          <option value="id">id</option>
+          <option value="title">title</option>
+          <option value="href">href</option>
+        </select>
+        <select id="values" name="values">
+          <optgroup id="class" label="class">
+            <option class="class" value="class1" selected>class1</option>
+            <option class="class" value="class2">class2</option>
+            <option class="class" value="class3">class3</option>
+            <option class="class" value="class4">class4</option>
+          </optgroup>
+          <optgroup id="id" label="id" disabled>
+            <option class="id" value="id1">id1</option>
+            <option class="id" value="id2">id2</option>
+            <option class="id" value="id3">id3</option>
+            <option class="id" value="id4">id4</option>
+          </optgroup>
+          <optgroup id="title" label="title" disabled>
+            <option class="title" value="title1">title1</option>
+            <option class="title" value="title2">title2</option>
+            <option class="title" value="title3">title3</option>
+            <option class="title" value="title4">title4</option>
+          </optgroup>
+          <optgroup id="href" label="href" disabled>
+            <option class="href" value="href1">href1</option>
+            <option class="href" value="href2">href2</option>
+            <option class="href" value="href3">href3</option>
+            <option class="href" value="href4">href4</option>
+          </optgroup>
+        </select>
+      </section>
+
+      <!-- <section id="selector-editor-hover">
+        <p>Hover link styles:</p>
+        <select id="attribute-hover" name="attribute">
+          <option value="class" selected>class</option>
+          <option value="id">id</option>
+          <option value="title">title</option>
+          <option value="href">href</option>
+        </select>
+        <select id="values-hover" name="values">
+          <optgroup id="class-hover" label="class">
+            <option class="class" value="class1" selected>class1</option>
+            <option class="class" value="class2">class2</option>
+            <option class="class" value="class3">class3</option>
+            <option class="class" value="class4">class4</option>
+          </optgroup>
+          <optgroup id="id-hover" label="id" disabled>
+            <option class="id" value="id1">id1</option>
+            <option class="id" value="id2">id2</option>
+            <option class="id" value="id3">id3</option>
+            <option class="id" value="id4">id4</option>
+          </optgroup>
+          <optgroup id="title-hover" label="title" disabled>
+            <option class="title" value="title1">title1</option>
+            <option class="title" value="title2">title2</option>
+            <option class="title" value="title3">title3</option>
+            <option class="title" value="title4">title4</option>
+          </optgroup>
+          <optgroup id="href-hover" label="href" disabled>
+            <option class="href" value="href1">href1</option>
+            <option class="href" value="href2">href2</option>
+            <option class="href" value="href3">href3</option>
+            <option class="href" value="href4">href4</option>
+          </optgroup>
+        </select>
+      </section> -->
+<!-- HTML structure for selector display must be pulled to the left
+     for the code to display correctly aligned on the page -->
+      <section id="selector-display">
+<span class="ruleset"><span class="selector">[<span class="attribute">attribute</span>*="<span class="attribute-value">value</span>"]</span> {
+    <span class="color"><span class="property">color</span>: <span class="property-value">#363</span></span>;
+}
+
+<span class="ruleset"><span class="selector">[<span class="attribute">attribute</span>*="<span class="attribute-value">value</span>"]:hover</span> {
+    <span class="color"><span class="property">color</span>: <span class="property-value">#ff0</span></span>;
+    <span class="background"><span class="property">bakcground-color</span>: <span class="property-value">#33f</span></span>;
+}
+</span>
+      </section>
+
+      <section class="example">
+        <p>In the book <a href="">"2001: A Space Odyssey"</a>, <a href="">Sir Arthur Clarke</a> describes how is the history of mankind's mental abillities altered by the intervention of higher intelligence beings the visited our planet eons ago, while mankind was no much different from the other primates. In the modern age of man, there was a strange signal discovered by the scientists, that originated from the <a href="">Moon</a>. During the excavations on the surface of the Moon, they found an obelisk like object that emitted a strong sound and EM signal directed towards the <a href="">Saturn</a> where it was detected the presence of another strange object, much larger in size than the object on the Moon. In order to solve the mystery of these strange objects, a mission was sent to Saturn to investigate the new object. The spaceship that was sent on the mission was named <a href="">"Discovery One"</a> and it's main computer, the high-tech AI was called <a href="">"HAL 9000"</a>.</p>
+      </section>
+    </section>
+
+  </div> <!-- end ".container" -->
+</body>
+
+</html>
