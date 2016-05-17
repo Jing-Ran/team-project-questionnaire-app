@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ccc;
+  background-color: #fff;
   font-size: 16px;
 }
 
@@ -59,17 +59,12 @@ a.space:hover {
 }
 
 .container {
-  width: 80%;
-  max-width: 900px;
-  min-width: 700px;
+  width: 1200px;
   margin: 0 auto;
 }
 
-.example,
-.example-html {
-  padding: 30px;
-  background-color: #fff;
-  margin-bottom: 30px;
+.article-introduction a {
+  color: green;
 }
 
 .button {
@@ -78,6 +73,7 @@ a.space:hover {
   padding: 5px 10px;
   border-radius: 3px;
   color: #fff;
+  line-height: 25px;
 }
 
 .button:hover {
@@ -87,21 +83,34 @@ a.space:hover {
 
 #selector-editor {
   margin: 20px 0;
+  padding-top: 30px;
+  display: inline-block;
+  width: 230px;
+  vertical-align: top;
+}
+
+#selector-editor div {
+  margin-bottom: 20px;
 }
 
 #selector-editor select {
-  width: 150px;
-  height: 25px;
+  height: 35px;
+  padding-left: 10px;
   border: 1px solid #999;
   background-color: #fff;
+  width: 100%;
 }
 
-.selector .attribute,
+#selector-editor p {
+  margin-bottom: 0;
+}
+
+.attribute,
 .tag {
   color: blue;
 }
 
-.selector .attribute-value {
+.attribute-value {
   color: purple;
 }
 
@@ -113,13 +122,21 @@ a.space:hover {
   color: green;
 }
 
+.tag,
+.property,
+.property-value,
+code {
+  font-family: courier, monospace, sans-serif;
+}
+
 #selector-display {
-  margin: 20px 0;
-  width: 100%;
-  min-height: 150px;
+  margin: 20px 0 20px 100px;
+  width: 500px;
   white-space: pre-wrap;
-  padding: 0 20px;
+  padding: 15px 30px 0;
   background-color: #fff;
+  display: inline-block;
+  border: 1px solid #ccc;
 }
 
 #selector-display span {
@@ -128,4 +145,33 @@ a.space:hover {
 
 optgroup[disabled] {
   display: none;
+}
+
+.controls {
+  padding-left: 15%;
+  margin-bottom: 30px;
+  background-color: #dedede;
+}
+
+.result {
+  position: relative;
+}
+
+.result section {
+  padding: 30px;
+  background-color: #dedede;
+  margin-bottom: 30px;
+}
+
+.example-html {
+  width: 65%;
+  display: inline-block;
+}
+
+.example {
+  width: 33%;
+  display: inline-block;
+  margin-left: 15px;
+  position: absolute;
+  right: 0;
 }

@@ -15,114 +15,112 @@
       <p>[attribute*=value]</p>
       CSS selector
     </h1>
-    <h2>Work In Progress...</h2>
-<!--
+
     <section class="article-introduction">
 
       <h2 class="section-title">Brief description</h2>
 
-      <p>The HTML &lt;i&gt; (paragraph) element is used to represent parts of the text that is in some way different from other text. That can be a technical term, a phrase from a foreign language, a thought or names of objects.</p>
+      <p>The CSS selector <code>[attribute-name*=value]</code> is used to select elements whose attribute named <code>attribute-name</code> contains the string <code>value</code>.</p>
 
-      <p>The &lt;i&gt; element should represent the part of the text that has different semantic meaning from the rest of the text and the text enclosed in &lt;i&gt; element may be displayed in italics by the browser.</p>
-
-      <p>The &lt;i&gt; element should only be used when there is not more appropriate semantic element. Some elements that should be considered before using &lt;i&gt; element are:</p>
-
-      <ul>
-        <li>&lt;em&gt; - emphasized text</li>
-        <li>&lt;strong&gt; - important text</li>
-        <li>&lt;mark&gt; - marked/highlighted text</li>
-        <li>&lt;cite&gt; - the title of a work</li>
-        <li>&lt;dfn&gt; - a definition term</li>
-      </ul>
-
-      <p>Read more about the &lt;i&gt; element in this article: <a href="#encyclopedia-article-link">The &lt;i&gt; Element</a></p>
+      <p>Read more about this selector in the following <a href="#encyclopedia-article-link">article</a>.</p>
 
     </section>
--->
+
     <section class="interactive-example">
 
-      <h2 class="section-title exercise-title">Example</h2>
+      <h2 class="section-title">Example</h2>
 
-      <p>Select the attribute and its value form the dropdown lists to create a css rulesets that will be applied to the text:</p>
+      <p>Select the attribute and its value form the dropdown lists to create a css selectors that will apply the rulesets to the text:</p>
 
-      <div title="button-reset" class="button reset">Reset styles</div>
+      <div class="controls">
+        <section id="selector-editor">
+          <div title="button-reset" class="button reset">Reset styles</div>
+          <div>
+            <p>Select attribute:</p>
+            <select id="attribute" name="attribute">
+              <option value="class" selected>class</option>
+              <option value="target">target</option>
+              <option value="title">title</option>
+              <option value="href">href</option>
+            </select>
+          </div>
+          <div>
+            <p>Select value:</p>
+            <select id="values" name="values">
+              <optgroup id="class" label="class">
+                <option class="class" value="space" selected>space</option>
+                <option class="class" value="outer-link">outer-link</option>
+                <option class="class" value="local-link">local-link</option>
+                <option class="class" value="writer">writer</option>
+                <option class="class" value="person">person</option>
+                <option class="class" value="space planet">space planet</option>
+                <option class="class" value="computer person">computer person</option>
+                <option class="class" value="spaceship">spaceship</option>
+              </optgroup>
+              <optgroup id="target" label="target" disabled>
+                <option class="target" value="_self">_self</option>
+                <option class="target" value="_blank">_blank</option>
+              </optgroup>
+              <optgroup id="title" label="title" disabled>
+                <option class="title" value="Book">Book</option>
+                <option class="title" value="Discovery One">Discovery One</option>
+                <option class="title" value="HAL 9000">HAL 9000</option>
+                <option class="title" value="Writer">Writer</option>
+                <option class="title" value="Planets: Moon">Planets: Moon</option>
+                <option class="title" value="Planets: Saturn">Planets: Saturn</option>
+                <option class="title" value="'2001: A Space Odyssey'">'2001: A Space Odyssey'</option>
+              </optgroup>
+              <optgroup id="href" label="href" disabled>
+                <option class="href" value="http">http</option>
+                <option class="href" value="https">https</option>
+                <option class="href" value="wikipedia.org">wikipedia.org</option>
+                <option class="href" value="nineplanets.org">nineplanets.org</option>
+              </optgroup>
+            </select>
+          </div>
+        </section> <!-- End "#selector-editor"-->
 
-      <section id="selector-editor">
-        <p>Normal link styles:</p>
-        <select id="attribute" name="attribute">
-          <option value="class" selected>class</option>
-          <option value="target">target</option>
-          <option value="title">title</option>
-          <option value="href">href</option>
-        </select>
-        <select id="values" name="values">
-          <optgroup id="class" label="class">
-            <option class="class" value="space" selected>space</option>
-            <option class="class" value="outer-link">outer-link</option>
-            <option class="class" value="local-link">local-link</option>
-            <option class="class" value="writer">writer</option>
-            <option class="class" value="person">person</option>
-            <option class="class" value="space planet">space planet</option>
-            <option class="class" value="computer person">computer person</option>
-            <option class="class" value="spaceship">spaceship</option>
-          </optgroup>
-          <optgroup id="target" label="target" disabled>
-            <option class="target" value="_self">_self</option>
-            <option class="target" value="_blank">_blank</option>
-          </optgroup>
-          <optgroup id="title" label="title" disabled>
-            <option class="title" value="Book">Book</option>
-            <option class="title" value="Discovery One">Discovery One</option>
-            <option class="title" value="HAL 9000">HAL 9000</option>
-            <option class="title" value="Writer">Writer</option>
-            <option class="title" value="Planets: Moon">Planets: Moon</option>
-            <option class="title" value="Planets: Saturn">Planets: Saturn</option>
-            <option class="title" value="'2001: A Space Odyssey'">'2001: A Space Odyssey'</option>
-          </optgroup>
-          <optgroup id="href" label="href" disabled>
-            <option class="href" value="http">http</option>
-            <option class="href" value="https">https</option>
-            <option class="href" value="wikipedia.org">wikipedia.org</option>
-            <option class="href" value="nineplanets.org">nineplanets.org</option>
-          </optgroup>
-        </select>
-      </section>
+  <!-- HTML structure for selector display must be pulled to the left
+       for the code to display correctly aligned on the page -->
+        <section id="selector-display">
+  <span class="ruleset">[<span class="attribute">attribute</span>*="<span class="attribute-value">value</span>"] {
+      <span class="property">color</span>: <span class="property-value">green</span>;
+      <span class="property">background-color</span>: <span class="property-value">lightgray</span>;
+  }
+  </span>
+  <span class="ruleset">[<span class="attribute">attribute</span>*="<span class="attribute-value">value</span>"]:hover {
+      <span class="property">color</span>: <span class="property-value">white</span>;
+      <span class="property">background-color</span>: <span class="property-value">red</span>;
+  }
+  </span>
+        </section> <!-- End "#selector-display" -->
+      </div>
 
-<!-- HTML structure for selector display must be pulled to the left
-     for the code to display correctly aligned on the page -->
-      <section id="selector-display">
-<span class="ruleset"><span class="selector">[<span class="attribute">attribute</span>*="<span class="attribute-value">value</span>"]</span> {
-    <span class="color"><span class="property">color</span>: <span class="property-value">green</span></span>;
-    <span class="background"><span class="property">background-color</span>: <span class="property-value">lightgray</span></span>;
-}
+      <div class="result">
+        <section class="example-html">
+          <h3>HTML:</h3>
+          <p>
+            In the book <span class="tag">&lt;a <span class="property">title=</span><span class="property-value">"Book: '2001: A Space Odyssey'"</span> <span class="property">target=</span><span class="property-value">"_blank"</span> <span class="property">class=</span><span class="property-value">"space outer-link"</span> <span class="property">href=</span><span class="property-value">"http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_%28novel%29"</span><span class="tag">&gt;</span></span>"2001: A Space Odyssey"<span class="tag">&lt;/a&gt;</span>, <span class="tag">&lt;a <span class="property">title=</span><span class="property-value">"Writer: 'Sir Arthur C. Clarke'"</span> <span class="property">target=</span><span class="property-value">"_blank"</span> <span class="property">class=</span><span class="property-value">"writer person outer-link"</span> <span class="property">href=</span><span class="property-value">"https://en.wikipedia.org/wiki/Arthur_C._Clarke"</span>&gt;</span>Sir Arthur Clarke<span class="tag">&lt;/a&gt;</span> describes how is the history of mankind's mental abilities altered by the intervention of higher intelligence beings that visited our planet eons ago, while mankind was not much different from the other primates. In the modern age of man, there was a strange signal discovered by the scientists, that originated from the <span class="tag">&lt;a <span class="property">title=</span><span class="property-value">"Planets: Moon"</span> <span class="property">target=</span><span class="property-value">"_self"</span> <span class="property">class=</span><span class="property-value">"space planet local-link"</span> <span class="property">href=</span><span class="property-value">"http://nineplanets.org/luna.html"</span>&gt;</span>Moon<span class="tag">&lt;/a&gt;</span>.
 
-<span class="ruleset"><span class="selector">[<span class="attribute">attribute</span>*="<span class="attribute-value">value</span>"]:hover</span> {
-    <span class="color"><span class="property">color</span>: <span class="property-value">white</span></span>;
-    <span class="background"><span class="property">background-color</span>: <span class="property-value">red</span></span>;
-}
-</span>
-      </section>
+          <p>
+            During the excavations on the surface of the Moon, they found an obelisk like object that emitted a strong sound and EM signal directed towards the <span class="tag">&lt;a <span class="property">title=</span><span class="property-value">"Planets: Saturn"</span> <span class="property">target=</span><span class="property-value">"_self"</span> <span class="property">class=</span><span class="property-value">"space planet local-link"</span> <span class="property">href=</span><span class="property-value">"http://nineplanets.org/saturn.html"</span>&gt;</span>Saturn<span class="tag">&lt;/a&gt;</span> where it was detected the presence of another strange object, much larger in size than the object on the Moon.
+          </p>
 
-      <section id="example" class="example">
-        <p>In the book <a title="Book: '2001: A Space Odyssey'" target="_blank" class="space outer-link" href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_%28novel%29">"2001: A Space Odyssey"</a>, <a title="Writer: 'Sir Arthur C. Clarke'" target="_blank" class="writer person outer-link" href="https://en.wikipedia.org/wiki/Arthur_C._Clarke">Sir Arthur Clarke</a> describes how is the history of mankind's mental abilities altered by the intervention of higher intelligence beings the visited our planet eons ago, while mankind was no much different from the other primates. In the modern age of man, there was a strange signal discovered by the scientists, that originated from the <a title="Planets: Moon" target="_self" class="space planet local-link" href="http://nineplanets.org/luna.html">Moon</a>.</p>
+          <p>
+            In order to solve the mystery of these strange objects, a mission was sent to Saturn to investigate the new object. The spaceship that was sent on the mission was named <span class="tag">&lt;a <span class="property">title=</span><span class="property-value">"'2001: A Space Odyssey' - Spaceship Discovery One"</span> <span class="property">target=</span><span class="property-value">"_blank"</span> <span class="property">class=</span><span class="property-value">"space spaceship outer-link"</span> <span class="property">href=</span><span class="property-value">"https://en.wikipedia.org/wiki/Discovery_One"</span>&gt;</span>"Discovery One"<span class="tag">&lt;/a&gt;</span> and it's main computer, the high-tech AI was called <span class="tag">&lt;a <span class="property">title=</span><span class="property-value">"'2001: A Space Odyssey' - HAL 9000"</span> <span class="property">target=</span><span class="property-value">"_blank"</span> <span class="property">class=</span><span class="property-value">"computer person outer-link"</span> <span class="property">href=</span><span class="property-value">"https://en.wikipedia.org/wiki/HAL_9000"</span>&gt;</span>"HAL 9000"<span class="tag">&lt;/a&gt;</span>.
+          </p>
+        </section> <!-- End "#example-html" -->
 
-        <p>During the excavations on the surface of the Moon, they found an obelisk like object that emitted a strong sound and EM signal directed towards the <a title="Planets: Saturn" target="_self" class="space planet local-link" href="http://nineplanets.org/saturn.html">Saturn</a> where it was detected the presence of another strange object, much larger in size than the object on the Moon.</p>
+        <section id="example" class="example">
+          <h3>RESULT:</h3>
+          <p>In the book <a title="Book: '2001: A Space Odyssey'" target="_blank" class="space outer-link" href="http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_%28novel%29">"2001: A Space Odyssey"</a>, <a title="Writer: 'Sir Arthur C. Clarke'" target="_blank" class="writer person outer-link" href="https://en.wikipedia.org/wiki/Arthur_C._Clarke">Sir Arthur Clarke</a> describes how is the history of mankind's mental abilities altered by the intervention of higher intelligence beings that visited our planet eons ago, while mankind was not much different from the other primates. In the modern age of man, there was a strange signal discovered by the scientists, that originated from the <a title="Planets: Moon" target="_self" class="space planet local-link" href="http://nineplanets.org/luna.html">Moon</a>.</p>
 
-        <p>In order to solve the mystery of these strange objects, a mission was sent to Saturn to investigate the new object. The spaceship that was sent on the mission was named <a title="'2001: A Space Odyssey' - Spaceship Discovery One" target="_blank" class="space spaceship outer-link" href="https://en.wikipedia.org/wiki/Discovery_One">"Discovery One"</a> and it's main computer, the high-tech AI was called <a title="'2001: A Space Odyssey' - HAL 9000" target="_blank" class="computer person outer-link" href="https://en.wikipedia.org/wiki/HAL_9000">"HAL 9000"</a>.</p>
-      </section>
-      <section class="example-html">
-        <p>
-          In the book <span class="tag">&lt;a <span class="property">title=</span><span class="property-value">"Book: '2001: A Space Odyssey'"</span> <span class="property">target=</span><span class="property-value">"_blank"</span> <span class="property">class=</span><span class="property-value">"space outer-link"</span> <span class="property">href=</span><span class="property-value">"http://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_%28novel%29"</span><span class="tag">&gt;</span></span>"2001: A Space Odyssey"<span class="tag">&lt;/a&gt;</span>, &lt;a title="Writer: 'Sir Arthur C. Clarke'" target="_blank" class="writer person outer-link" href="https://en.wikipedia.org/wiki/Arthur_C._Clarke"&gt;Sir Arthur Clarke&lt;/a&gt; describes how is the history of mankind's mental abilities altered by the intervention of higher intelligence beings the visited our planet eons ago, while mankind was no much different from the other primates. In the modern age of man, there was a strange signal discovered by the scientists, that originated from the &lt;a title="Planets: Moon" target="_self" class="space planet local-link" href="http://nineplanets.org/luna.html">Moon&lt;/a&gt;.
+          <p>During the excavations on the surface of the Moon, they found an obelisk like object that emitted a strong sound and EM signal directed towards the <a title="Planets: Saturn" target="_self" class="space planet local-link" href="http://nineplanets.org/saturn.html">Saturn</a> where it was detected the presence of another strange object, much larger in size than the object on the Moon.</p>
 
-        <p>
-          During the excavations on the surface of the Moon, they found an obelisk like object that emitted a strong sound and EM signal directed towards the &lt;a title="Planets: Saturn" target="_self" class="space planet local-link" href="http://nineplanets.org/saturn.html"&gt;Saturn&lt;/a&gt; where it was detected the presence of another strange object, much larger in size than the object on the Moon.
-        </p>
-
-        <p>
-          In order to solve the mystery of these strange objects, a mission was sent to Saturn to investigate the new object. The spaceship that was sent on the mission was named &lt;a title="'2001: A Space Odyssey' - Spaceship Discovery One" target="_blank" class="space spaceship outer-link" href="https://en.wikipedia.org/wiki/Discovery_One"&gt;"Discovery One"&lt;/a&gt; and it's main computer, the high-tech AI was called &lt;a title="'2001: A Space Odyssey' - HAL 9000" target="_blank" class="computer person outer-link" href="https://en.wikipedia.org/wiki/HAL_9000"&gt;"HAL 9000"&lt;/a&gt;.
-        </p>
-      </section>
-    </section>
+          <p>In order to solve the mystery of these strange objects, a mission was sent to Saturn to investigate the new object. The spaceship that was sent on the mission was named <a title="'2001: A Space Odyssey' - Spaceship Discovery One" target="_blank" class="space spaceship outer-link" href="https://en.wikipedia.org/wiki/Discovery_One">"Discovery One"</a> and it's main computer, the high-tech AI was called <a title="'2001: A Space Odyssey' - HAL 9000" target="_blank" class="computer person outer-link" href="https://en.wikipedia.org/wiki/HAL_9000">"HAL 9000"</a>.</p>
+        </section> <!-- End "#example" -->
+        </div>
+    </section> <!-- End ".interactive-example" -->
 
   </div> <!-- end ".container" -->
 </body>
