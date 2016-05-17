@@ -24,19 +24,22 @@ p {
 
 a {
   text-decoration: none;
-  color: #336633;
+  color: orange;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #339;
+  color: purple;
 }
 
-code {
-  font-family: courier, monospace;
-  background-color: #eee;
-  padding: 2px 5px 0;
-  border-radius: 3px;
+a.space {
+  color: green;
+  background-color: lightgray;
+}
+
+a.space:hover {
+  color: white;
+  background-color: red;
 }
 
 .article-title {
@@ -62,9 +65,11 @@ code {
   margin: 0 auto;
 }
 
-.example p {
+.example,
+.example-html {
   padding: 30px;
   background-color: #fff;
+  margin-bottom: 30px;
 }
 
 .button {
@@ -91,20 +96,21 @@ code {
   background-color: #fff;
 }
 
-.selector .attribute {
-  color: green;
+.selector .attribute,
+.tag {
+  color: blue;
 }
 
 .selector .attribute-value {
   color: purple;
 }
 
-.ruleset .property {
+.property {
   color: red;
 }
 
-.ruleset .property-value {
-  color: blue;
+.property-value {
+  color: green;
 }
 
 #selector-display {

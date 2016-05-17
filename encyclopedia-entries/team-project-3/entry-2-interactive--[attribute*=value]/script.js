@@ -1,6 +1,34 @@
 $(document).ready(function () {
 
-  //$('[title*="reset"]').css({"background-color": "red", "color": "#000"});
+  $('.button.reset').click(function() {
+    resetStyles();
+  });
+
+  function resetStyles() {
+    $('#example a').css({"color": "orange", "background-color": "transparent"});
+    $('#example a').hover(
+      function() {
+        $(this).css({"color": "purple", "background-color": "transparent"});
+      },
+      function() {
+        $(this).css({"color": "orange", "background-color": "transparent"});
+      }
+    );
+  }
+
+  function applyStyles(attr, val) {
+    resetStyles();
+    $('['+attr+'*="'+val+'"]').css({"color": "green", "background-color": "lightgray"});
+    $('['+attr+'*="'+val+'"]').hover(
+      function() {
+        $(this).css({"color": "white", "background-color": "red"});
+      },
+      function() {
+        $(this).css({"color": "green", "background-color": "lightgray"});
+      }
+    );
+  }
+
   function initExample() {
     $('#attribute').on('change', function() {
       var attribute = $(this).val(),
@@ -8,6 +36,7 @@ $(document).ready(function () {
           optgroupAll = $('#values optgroup'),
           optgroupCurrent = $('#values optgroup#' + attribute);
       console.log('Attribute: ' + attribute);
+      // console.log(optgroupCurrent);
 
       optgroupAll.attr('disabled', 'disabled');
       optgroupAll.find('option[selected]').prop('selected', false).removeAttr('selected');
@@ -20,6 +49,8 @@ $(document).ready(function () {
       $('.ruleset .attribute-value')[0].innerText = attributeValue;
       $('.ruleset .attribute')[1].innerText = attribute;
       $('.ruleset .attribute-value')[1].innerText = attributeValue;
+
+      applyStyles(attribute, attributeValue);
     });
 
     $('#values' ).on('change', function() {
@@ -33,6 +64,8 @@ $(document).ready(function () {
       $('.ruleset .attribute-value')[0].innerText = attributeValue;
       $('.ruleset .attribute')[1].innerText = attribute;
       $('.ruleset .attribute-value')[1].innerText = attributeValue;
+
+      applyStyles(attribute, attributeValue);
     });
   }
 
