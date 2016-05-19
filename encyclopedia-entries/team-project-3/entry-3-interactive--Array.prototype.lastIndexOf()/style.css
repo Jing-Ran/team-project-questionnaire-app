@@ -184,3 +184,8 @@ li.match {
 .controls input:not(.button) {
   border-bottom: 1px dashed #ddd;
 }
+
+.result p {
+  visibility: hidden;
+  position: absolute;
+}

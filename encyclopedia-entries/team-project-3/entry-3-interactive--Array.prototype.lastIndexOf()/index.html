@@ -57,7 +57,7 @@
           <li><span class="array-item">8</span><span class="array-index">[5]</span></li>
           <li><span class="array-item">1</span><span class="array-index">[6]</span></li>
           <li><span class="array-item">'true'</span><span class="array-index">[7]</span></li>
-          <li><span class="array-item">4</span><span class="array-index">[8]</span></li>
+          <li><span class="array-item">A</span><span class="array-index">[8]</span></li>
           <li><span class="array-item">8</span><span class="array-index">[9]</span></li>
           <li><span class="array-item">2</span><span class="array-index">[10]</span></li>
           <li><span class="array-item">9</span><span class="array-index">[11]</span></li>
@@ -71,8 +71,13 @@
       </section> <!-- End ".array-presentation" -->
 
       <section class="controls">
-        <code>variableMix.lastIndexOf(</code><input id="array-element" type="text" required placeholder="enter value...">, <input id="index-from" type="number"><code>)</code> <input id="search" class="button" type="button" value="Search">
+        <code>variableMix.lastIndexOf(</code><input id="array-element" class="parameters" type="text" required placeholder="enter value...">, <input id="index-from" class="parameters" type="number"><code>)</code> <input id="search" class="button" type="button" value="Search">
       </section> <!-- End ".controls" -->
+
+      <section class="result">
+        <p id="not-found">Element <span class="element"></span> is not found in the array starting from index <span class="index-start"></span>!</p>
+        <p id="found">Starting from the index <span class="index-start"></span>, element <span class="element"></span> is found in the array on index <span class="index-found"></span>.</p>
+      </section>
 
     </section> <!-- End ".interactive-example" -->
 
