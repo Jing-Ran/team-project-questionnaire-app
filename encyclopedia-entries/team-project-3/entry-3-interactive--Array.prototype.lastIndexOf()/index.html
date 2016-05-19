@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Example - Array.prototype.lastIndexOf method</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="../lib/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="article-title">
+      Encyclopedia Interactive Example
+      <p><code>Array.prototype.lastIndexOf()</code></p>
+      JavaScript method
+    </h1>
+
+    <section class="article-introduction">
+
+      <h2 class="section-title">Brief description</h2>
+
+      <p>The <code>Array.prototype.lastIndexOf()</code> JavaScript method is used to find the last position in the array where an element appears. If the element does not exist in the array this method returns value <code>-1</code>.</p>
+
+      <p>The syntax for using this method is following:</p>
+      <code>variableMix.lastIndexOf(element[, fromIndex])</code>
+      <p>where:</p>
+      <ul>
+        <li><code>variableMix</code> - name of the array.</li>
+        <li><code>element</code> - element to be found, if you search for strings, this should be enclosed in quotes. This parameter is <span class="alert">required</span>.</li>
+        <li><code>fromIndex</code> - index from which to start searching backwards through the array. This parameter is <span class="info">optional</span>.</li>
+      </ul>
+
+      <p>Read more about this method in the following <a href="#encyclopedia-article-link">article</a>.</p>
+
+    </section> <!-- End ".article-introduction" -->
+
+    <section class="interactive-example">
+
+      <h2 class="section-title">Example</h2>
+
+      <section class="example-description">
+        <p>You are presented with an array containing different values and types of values. Under each array item you can see the array index in square brackets, corresponding to that item.</p>
+        <p>Under the array there is a input control where you can edit the parameters for <code>lastIndexOf</code> method and then apply the method on the array. After applying the method, the item returned by it is marked in the array presentation. You may wish to try to determine what will the output item be before applying the method, to see if you have learned how the method works.</p>
+      </section> <!-- End ".example-description" -->
+
+      <section class="array-presentation">
+        <h3>Array name: <span class="names">variableMix</span> <input id="reset" class="button" type="button" value="Reset array"></h3>
+
+        <ul class="example-array">
+          <li>[</li>
+          <li><span class="array-item">3</span><span class="array-index">[0]</span></li>
+          <li><span class="array-item">true</span><span class="array-index">[1]</span></li>
+          <li><span class="array-item">9</span><span class="array-index">[2]</span></li>
+          <li><span class="array-item">2</span><span class="array-index">[3]</span></li>
+          <li><span class="array-item">'howdy!'</span><span class="array-index">[4]</span></li>
+          <li><span class="array-item">8</span><span class="array-index">[5]</span></li>
+          <li><span class="array-item">1</span><span class="array-index">[6]</span></li>
+          <li><span class="array-item">'true'</span><span class="array-index">[7]</span></li>
+          <li><span class="array-item">4</span><span class="array-index">[8]</span></li>
+          <li><span class="array-item">8</span><span class="array-index">[9]</span></li>
+          <li><span class="array-item">2</span><span class="array-index">[10]</span></li>
+          <li><span class="array-item">9</span><span class="array-index">[11]</span></li>
+          <li><span class="array-item">true</span><span class="array-index">[12]</span></li>
+          <li><span class="array-item">8</span><span class="array-index">[13]</span></li>
+          <li><span class="array-item">3</span><span class="array-index">[14]</span></li>
+          <li><span class="array-item">'3'</span><span class="array-index">[15]</span></li>
+          <li>]</li>
+        </ul>
+
+      </section> <!-- End ".array-presentation" -->
+
+      <section class="controls">
+        <code>variableMix.lastIndexOf(</code><input id="array-element" type="text" required placeholder="enter value...">, <input id="index-from" type="number"><code>)</code> <input id="search" class="button" type="button" value="Search">
+      </section> <!-- End ".controls" -->
+
+    </section> <!-- End ".interactive-example" -->
+
+  </div> <!-- End ".container" -->
+</body>
+
+</html>

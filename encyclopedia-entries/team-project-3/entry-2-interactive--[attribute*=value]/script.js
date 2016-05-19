@@ -18,13 +18,13 @@ $(document).ready(function () {
 
   function applyStyles(attr, val) {
     resetStyles();
-    $('['+attr+'*="'+val+'"]').css({"color": "green", "background-color": "lightgray"});
+    $('['+attr+'*="'+val+'"]').css({"color": "green", "background-color": "silver"});
     $('['+attr+'*="'+val+'"]').hover(
       function() {
         $(this).css({"color": "white", "background-color": "red"});
       },
       function() {
-        $(this).css({"color": "green", "background-color": "lightgray"});
+        $(this).css({"color": "green", "background-color": "silver"});
       }
     );
   }
