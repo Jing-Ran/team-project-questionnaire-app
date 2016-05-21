@@ -22,10 +22,9 @@ $(document).ready(function () {
         close = Math.max(selection.anchorOffset, selection.focusOffset), // index where selection ends
         nodeContent = anchorNode.textContent; // text content of the node where selection is located
 
-    if ( anchorNode === focusNode && parentNode.nodeName !== 'I' ) {
+    if ( anchorNode === focusNode && selected !== '' ) {
     // if the selection is inside one node and node is not <i> element
-      if ( selected !== '' ) {
-        // if the selection is not empty
+    // and if the selection is not empty
 
         $(document).on('keydown', function(e) {
           if (e.which === 17) {
@@ -73,8 +72,7 @@ $(document).ready(function () {
           }
         }); // End "keydown" event for "Ctrl"
 
-      } // End if ( selected !== '' )
-    } // End "( anchorNode === focusNode && parentNode.nodeName !== 'I' )"
+    } // End "( anchorNode === focusNode && selected !== '' )"
 
   }); // End "mouseup" event
 
