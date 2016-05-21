@@ -17,6 +17,14 @@ body * {
   box-sizing: border-box;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
 p {
   margin: 15px 0;
   line-height: 1.5em;
@@ -30,10 +38,6 @@ a {
 a:hover {
   text-decoration: underline;
   color: purple;
-}
-
-.names {
-  font-style: italic;
 }
 
 .article-title {
@@ -73,7 +77,6 @@ a:hover {
   border-radius: 3px;
   color: #fff;
   line-height: 25px;
-  float: right;
 }
 
 .button:hover {
@@ -93,6 +96,10 @@ code {
   font-family: courier, monospace, sans-serif;
 }
 
+.array-presentation {
+  text-align: center;
+}
+
 .array-presentation h3::after {
   content: "";
   display: block;
@@ -101,11 +108,17 @@ code {
 
 .array-presentation h3 {
   line-height: 35px;
+  text-align: left;
+}
+
+.array-presentation .button {
+  float: right;
 }
 
 .example-array {
   list-style: none;
-  margin: 30px 0;
+  margin-top: 30px;
+  display: inline-block;
 }
 
 .example-array::after {
@@ -134,7 +147,6 @@ code {
   background-color: transparent;
   color: #000;
   box-shadow: none;
-  /*margin: 0 -5px;*/
 }
 
 .array-item {
@@ -164,7 +176,7 @@ li.match {
 }
 
 .controls {
-  margin: 80px 0 50px;
+  margin: 50px 0;
   text-align: center;
   font-size: 2em;
 }
@@ -185,7 +197,51 @@ li.match {
   border-bottom: 1px dashed #ddd;
 }
 
-.result p {
+.result {
+  position: relative;
+  height: 80px;
+}
+
+.result div {
   visibility: hidden;
   position: absolute;
+}
+
+.result div p {
+  font-size: 2em;
+}
+
+.controls > span {
+  position: relative;
+}
+
+.tooltip,
+.tooltip-invalid {
+  font-size: 0.5em;
+  position: absolute;
+  opacity: 0;
+  left: 10px;
+  top: 45px;
+  width: 300px;
+  text-align: left;
+  background-color: #000;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px;
+}
+
+.controls input:focus ~ .tooltip {
+  opacity: 0.8;
+}
+
+input[type="number"]:invalid {
+  box-shadow: none;
+}
+
+input[type="number"]:invalid ~ .tooltip {
+  opacity: 0;
+}
+
+input[type="number"]:invalid ~ .tooltip-invalid {
+  opacity: 0.8;
 }

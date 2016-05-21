@@ -20,15 +20,15 @@
 
       <h2 class="section-title">Brief description</h2>
 
-      <p>The <code>Array.prototype.lastIndexOf()</code> JavaScript method is used to find the last position in the array where an element appears. If the element does not exist in the array this method returns value <code>-1</code>.</p>
+      <p>The <code>Array.prototype.lastIndexOf()</code> JavaScript method is used to find the last position in the array where an element appears. If the element is found it returns the last index where the element is found, if the element does not exist in the array this method returns value <code>-1</code>.</p>
 
       <p>The syntax for using this method is following:</p>
-      <code>variableMix.lastIndexOf(element[, fromIndex])</code>
+      <code>variableMix.lastIndexOf(element, fromIndex)</code>
       <p>where:</p>
       <ul>
         <li><code>variableMix</code> - name of the array.</li>
-        <li><code>element</code> - element to be found, if you search for strings, this should be enclosed in quotes. This parameter is <span class="alert">required</span>.</li>
-        <li><code>fromIndex</code> - index from which to start searching backwards through the array. This parameter is <span class="info">optional</span>.</li>
+        <li><code>element</code> - a <span class="italic bold">string</span>, <span class="italic bold">number</span> or <span class="italic bold">boolean</span>. This is the element to be found, if you search for strings, this should be enclosed in quotes. This parameter is <span class="alert">required</span>.</li>
+        <li><code>fromIndex</code> - an <span class="italic bold">integer</span>. This is the index from which to start searching backwards through the array. This parameter is <span class="info">optional</span>.</li>
       </ul>
 
       <p>Read more about this method in the following <a href="#encyclopedia-article-link">article</a>.</p>
@@ -45,7 +45,7 @@
       </section> <!-- End ".example-description" -->
 
       <section class="array-presentation">
-        <h3>Array name: <span class="names">variableMix</span> <input id="reset" class="button" type="button" value="Reset array"></h3>
+        <h3><span class="italic">"variableMix"</span> array: <input id="reset" class="button" type="button" value="Reset array"></h3>
 
         <ul class="example-array">
           <li>[</li>
@@ -71,12 +71,53 @@
       </section> <!-- End ".array-presentation" -->
 
       <section class="controls">
-        <code>variableMix.lastIndexOf(</code><input id="array-element" class="parameters" type="text" required placeholder="enter value...">, <input id="index-from" class="parameters" type="number"><code>)</code> <input id="search" class="button" type="button" value="Search">
+        <code>variableMix.lastIndexOf(</code>
+        <span>
+          <input id="array-element" class="parameters" type="text" required placeholder="enter value...">, 
+          <span class="tooltip">
+            Enter string, boolean or number. <br>
+            Strings may be entered with or without quotes. Numbers and booleans must be entered without quotes, otherwise they are treated as strings.
+          </span>
+        </span>
+        <span>
+          <input id="index-from" class="parameters" type="number">
+          <span class="tooltip">
+            Enter integer here.<br>
+            If string is entered or the filed is empty then the search will start from the end of the array.
+          </span>
+          <span class="tooltip-invalid">
+            Only numbers please!<br>
+            Invalid values will cause the search to be performed from the end of the array.<br>
+            Firefox users should not enter the "+" sign in front of positive numbers.
+          </span>
+        </span>
+        <code>)</code>
+        <p>
+          <input id="search" class="button" type="button" value="Search">
+        </p>
       </section> <!-- End ".controls" -->
 
       <section class="result">
-        <p id="not-found">Element <span class="element"></span> is not found in the array starting from index <span class="index-start"></span>!</p>
-        <p id="found">Starting from the index <span class="index-start"></span>, element <span class="element"></span> is found in the array on index <span class="index-found"></span>.</p>
+        <div id="empty-element"><p>No element selected! Please try again.</p></div>
+        <div id="bad-start-index">
+          <p>Can't search from indexes lower than 0!</p>
+          <ul>
+            <li>Starting index is: <span class="index-start"></span>.</li>
+          </ul>
+        </div>
+        <div id="not-found">
+          <p>Element <span class="element"></span> is not found in the array!</p>
+          <ul>
+            <li>Starting index is: <span class="index-start"></span>.</li>
+          </ul>
+        </div>
+        <div id="found">
+          <p>Found element <span class="element"></span>!</p>
+          <ul>
+            <li>Found on index: <span class="index-found"></span>.</li>
+            <li>Starting index is: <span class="index-start"></span>.</li>
+          </ul>
+        </div>
       </section>
 
     </section> <!-- End ".interactive-example" -->
