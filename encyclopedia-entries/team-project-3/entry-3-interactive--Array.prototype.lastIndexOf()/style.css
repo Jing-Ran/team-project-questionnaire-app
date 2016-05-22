@@ -199,7 +199,7 @@ li.match {
 
 .result {
   position: relative;
-  height: 80px;
+  height: 150px;
 }
 
 .result div {
@@ -244,4 +244,24 @@ input[type="number"]:invalid ~ .tooltip {
 
 input[type="number"]:invalid ~ .tooltip-invalid {
   opacity: 0.8;
+}
+
+footer {
+  background-color: #ddd;
+}
+
+footer p {
+  text-align: center;
+  line-height: 100px;
+  margin: 0;
+  color: #888;
+}
+
+footer a {
+  color: #363;
+}
+
+.github-logo {
+  width: 30px;
+  vertical-align: middle;
 }

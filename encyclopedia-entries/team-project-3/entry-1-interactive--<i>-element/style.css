@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ccc;
+  background-color: #ddd;
   font-size: 16px;
 }
 
@@ -92,4 +92,20 @@ ul {
 .button:hover {
   background-color: #00a000;
   cursor: pointer;
+}
+
+footer {
+  background-color: #ddd;
+}
+
+footer p {
+  text-align: center;
+  line-height: 100px;
+  margin: 0;
+  color: #888;
+}
+
+.github-logo {
+  width: 30px;
+  vertical-align: middle;
 }
