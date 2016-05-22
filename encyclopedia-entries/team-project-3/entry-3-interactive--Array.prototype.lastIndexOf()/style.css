@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+body * {
+  font-size: inherit; /* reset all font sizes to 16px */ /* Maybe not needed */
+  /* reset some other styles */
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  color: inherit;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: purple;
+}
+
+.article-title {
+  font-size: 2em;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.article-title p {
+  font-size: 1.618em;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 1.6em;
+  margin: 20px 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto 100px;
+}
+
+.article-introduction a {
+  color: green;
+}
+
+.article-introduction ul {
+  margin: 20px;
+  margin-top: 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: #008000;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  line-height: 25px;
+}
+
+.button:hover {
+  background-color: #00a000;
+  cursor: pointer;
+}
+
+.alert {
+  color: #f00;
+}
+
+.info {
+  color: #2196f3;
+}
+
+code {
+  font-family: courier, monospace, sans-serif;
+}
+
+.array-presentation {
+  text-align: center;
+}
+
+.array-presentation h3::after {
+  content: "";
+  display: block;
+  clear: right;
+}
+
+.array-presentation h3 {
+  line-height: 35px;
+  text-align: left;
+}
+
+.array-presentation .button {
+  float: right;
+}
+
+.example-array {
+  list-style: none;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.example-array::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.example-array li {
+  float: left;
+  line-height: 25px;
+  margin: 3px;
+  padding: 5px 20px;
+  background-color: #2196f3;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px 0 #000;
+  position: relative;
+}
+
+.example-array li:first-child,
+.example-array li:last-child {
+  font-size: 5em;
+  line-height: 50px;
+  padding: 5px 0;
+  background-color: transparent;
+  color: #000;
+  box-shadow: none;
+}
+
+.array-item {
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 1.2em;
+  display: block;
+}
+
+.array-index {
+  display: block;
+  font-size: 0.7em;
+}
+
+li.no-match::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+li.match {
+  background-color: orange;
+}
+
+.controls {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 2em;
+}
+
+#array-element {
+  width: 200px;
+}
+
+#index-from {
+  width: 80px;
+}
+
+.controls .button {
+  font-size: 0.75em;
+}
+
+.controls input:not(.button) {
+  border-bottom: 1px dashed #ddd;
+}
+
+.result {
+  position: relative;
+  height: 80px;
+}
+
+.result div {
+  visibility: hidden;
+  position: absolute;
+}
+
+.result div p {
+  font-size: 2em;
+}
+
+.controls > span {
+  position: relative;
+}
+
+.tooltip,
+.tooltip-invalid {
+  font-size: 0.5em;
+  position: absolute;
+  opacity: 0;
+  left: 10px;
+  top: 45px;
+  width: 300px;
+  text-align: left;
+  background-color: #000;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px;
+}
+
+.controls input:focus ~ .tooltip {
+  opacity: 0.8;
+}
+
+input[type="number"]:invalid {
+  box-shadow: none;
+}
+
+input[type="number"]:invalid ~ .tooltip {
+  opacity: 0;
+}
+
+input[type="number"]:invalid ~ .tooltip-invalid {
+  opacity: 0.8;
+}
