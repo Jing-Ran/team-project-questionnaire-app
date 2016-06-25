@@ -7,170 +7,179 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <form name="questionnaire" class="questionnaire">
-    <fieldset name="questionnaire-card" class="questionnaire-card">
-      <h1 class="title">
-        <strong>Questionnaire</strong> Title
-      </h1>
-      <div>
-        <label for="user-name" class="question">
-          <p class="required">
-            What are your first and last names?
-          </p>
-          <input type="text" class="short-answer" name="user-name" id="user-name" placeholder="John Doe" required>
-        </label>
-      </div>
+  <form id="questionnaire" name="questionnaire" class="questionnaire">
+  <fieldset name="questionnaire-card" class="questionnaire-card">
+    <h1 class="title">
+      <strong>Questionnaire</strong> Title
+    </h1>
+    <div>
+      <label for="user-name" class="question">
+        <span class="question-text required">
+          What are your first and last names?
+        </span>
+        <input type="text" class="short-answer" name="user-name" id="user-name" placeholder="John Doe" required>
+      </label>
+    </div>
 
-      <div>
-        <label for="user-email" class="question">
-          <p class="required">
-            What is your email address?
-          </p>
-          <input type="email" class="short-answer" name="user-email" id="user-email" placeholder="email@example.com" required>
-        </label>
-      </div>
+    <div>
+      <label for="user-email" class="question">
+        <span class="question-text required">
+          What is your email address?
+        </span>
+        <input type="email" class="short-answer" name="user-email" id="user-email" placeholder="email@example.com" required>
+      </label>
+    </div>
 
-      <div>
-        <label for="user-fav-color" class="question">
-          <p>
-            What is your favorite color?
-          </p>
-          <input type="text" class="short-answer" name="user-fav-color" id="user-fav-color">
-        </label>
-      </div>
+    <div>
+      <label for="user-fav-color" class="question">
+        <span class="question-text">
+          What is your favorite color?
+        </span>
+        <input type="text" class="short-answer" name="user-fav-color" id="user-fav-color">
+      </label>
+    </div>
 
-      <div>
-        <input type="button" class="button" name="continue-btn" value="Continue">
-      </div>
-    </fieldset>
+    <div>
+      <input type="button" class="button" name="continue-btn" value="Continue">
+    </div>
+  </fieldset>
 
-    <fieldset name="questionnaire-card" class="questionnaire-card">
-      <h2 class="title">
-        Section Title
-      </h2>
-      <div>
-        <label class="question">
-          <p>
-            Question
-          </p>
-          <input type="text" class="short-answer" placeholder="Answer...">
-        </label>
-      </div>
+  <!-- second card -->
+  <fieldset name="questionnaire-card" class="questionnaire-card">
+    <h2 class="title">
+      Section Title
+    </h2>
+    <div>
+      <label class="question">
+        <span class="question-text">
+          Question
+        </span>
+        <input type="text" class="short-answer" placeholder="Answer...">
+      </label>
+    </div>
 
-      <div>
-        <label class="question">
-          <p>
-            Question
-          </p>
-          <input type="text" class="short-answer" placeholder="Answer...">
-        </label>
-      </div>
+    <div>
+      <label class="question">
+        <span class="question-text">
+          Question
+        </span>
+        <input type="text" class="short-answer" placeholder="Answer...">
+      </label>
+    </div>
 
-      <div>
-        <label class="question">
-          <p>
-            Question
-          </p>
-          <textarea class="long-answer"></textarea>
-        </label>
-      </div>
+    <div>
+      <label class="question">
+        <span class="question-text">
+          Question
+        </span>
+        <textarea class="long-answer"></textarea>
+      </label>
+    </div>
 
-      <div>
-        <input type="button" class="button" name="continue-btn" value="Continue">
-      </div>
-    </fieldset>
+    <div>
+      <input type="button" class="button" name="continue-btn" value="Continue">
+    </div>
+  </fieldset>
 
-    <fieldset name="questionnaire-card" disabled class="questionnaire-card disabled">
-      <h2 class="title">This section is disabled</h2>
-      <div>
-        <label class="question">
-          <p>Question</p>
-          <input type="text" class="short-answer" placeholder="Answer...">
-        </label>
-      </div>
+<!-- third card -->
+  <fieldset name="questionnaire-card" disabled="disabled" class="questionnaire-card disabled">
+    <h2 class="title">This section is disabled</h2>
+    <div>
+      <label class="question">
+        <span class="question-text">
+          Question
+        </span>
+        <input type="text" class="short-answer" placeholder="Answer...">
+      </label>
+    </div>
 
-      <div>
-        <input type="button" class="button" name="continue-btn" value="Continue">
-      </div>
-    </fieldset>
+    <div>
+      <input type="button" class="button" name="continue-btn" value="Continue">
+    </div>
+  </fieldset>
 
-    <fieldset name="questionnaire-card" class="questionnaire-card">
-      <h2 class="title">
-        <strong>Strong</strong> Section Title
-      </h2>
-      <div>
-        <p class="description">
+<!-- fourth card -->
+  <fieldset name="questionnaire-card" class="questionnaire-card">
+    <h2 class="title">
+      <strong>Strong</strong> Section Title
+    </h2>
+    <div>
+      <span class="card-description">
+        Description paragraph....
+      </span>
+    </div>
+
+    <div>
+      <img src="images/cube.jpg" alt="Rubic Cube">
+    </div>
+
+    <div>
+      <label class="question">
+        <span class="question-text">
+          Question
+        </span>
+        <span class="description">
           Description paragraph....
-        </p>
-      </div>
+        </span>
+        <input type="text" class="short-answer" placeholder="Answer...">
+      </label>
+    </div>
 
-      <div>
-        <img src="images/cube.jpg" alt="Rubic Cube">
-      </div>
+    <div>
+      <label class="question">
+        <span class="question-text">
+          Question
+        </span>
+        <textarea class="long-answer"></textarea>
+      </label>
+    </div>
 
-      <div>
-        <label class="question">
-          <p>
-            Question
-          </p>
-          <p class="description">
-            Description paragraph....
-          </p>
-          <input type="text" class="short-answer" placeholder="Answer...">
-        </label>
-      </div>
+    <div>
+      <input type="button" class="button" name="continue-btn" value="Continue">
+    </div>
+  </fieldset>
 
-      <div>
-        <label class="question">
-          <p>
-            Question
-          </p>
-          <textarea class="long-answer"></textarea>
-        </label>
-      </div>
+<!-- fifth card -->
+  <fieldset name="questionnaire-card" class="questionnaire-card">
+    <h2 class="title">Section Title w/ form elements</h2>
+    <div>
+      <span class="description">
+        Description paragraph....
+      </span>
+    </div>
 
-      <div>
-        <input type="button" class="button" name="continue-btn" value="Continue">
-      </div>
-    </fieldset>
+    <div class="question multiple-choice">
+      <span class="question-text">Multiple Choice w/ Radio Inputs</span>
+      <label><input class="answer" type="radio" name="radio-option" value="option1" checked> This is option 1</label>
+      <label><input class="answer" type="radio" name="radio-option" value="option2"> This is option 2</label>
+      <label><input class="answer" type="radio" name="radio-option" value="option3"> This is option 3</label>
+    </div>
 
-    <fieldset name="questionnaire-card" class="questionnaire-card">
-      <h2 class="title">Section Title w/ form elements</h2>
-      <div>
-        <p class="description">Description paragraph....</p>
-      </div>
+    <div class="question multiple-choice">
+      <span class="question-text">Multiple Choice w/ Checkbox Inputs</span>
+      <label><input class="answer" type="checkbox" name="checkbox-option" value="option1" checked> This is option 1</label>
+      <label><input class="answer" type="checkbox" name="checkbox-option" value="option2"> This is option 2</label>
+      <label><input class="answer" type="checkbox" name="checkbox-option" value="option3"> This is option 3</label>
+    </div>
 
-      <div>
-        <p>Multiple Choice w/ Radio Inputs</p>
-        <label class="multiple-choice"><input type="radio" name="radio-option" value="option1" checked> This is option 1</label>
-        <label class="multiple-choice"><input type="radio" name="radio-option" value="option2"> This is option 2</label>
-        <label class="multiple-choice"><input type="radio" name="radio-option" value="option3"> This is option 3</label>
-      </div>
+    <div class="question multiple-choice">
+      <label>
+        <span class="question-text required">Dropdown Select from the list below:</span>
+        <span class="description">Description paragraph....</span>
+        <select class="dropdown" name="dropdown">
+          <option class="answer" value="option1" selected>Option 1</option>
+          <option class="answer" value="option2">Option 2</option>
+          <option class="answer" value="option3">Option 3</option>
+        </select>
+      </label>
+    </div>
 
-      <div>
-        <p>Multiple Choice w/ Checkbox Inputs</p>
-        <label class="multiple-choice"><input type="checkbox" name="checkbox-option" value="option1" checked> This is option 1</label>
-        <label class="multiple-choice"><input type="checkbox" name="checkbox-option" value="option2"> This is option 2</label>
-        <label class="multiple-choice"><input type="checkbox" name="checkbox-option" value="option3"> This is option 3</label>
-      </div>
+    <div>
+      <input type="submit" class="submit" name="submit-btn" value="Submit">
+    </div>
+  </fieldset>
+</form>
 
-      <div>
-        <label class="question">
-          <p class="required">Dropdown Select from the list below:</p>
-          <p class="description">Description paragraph....</p>
-          <select class="dropdown" name="dropdown">
-            <option value="option1" selected>Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-        </label>
-      </div>
-
-      <div>
-        <input type="submit" class="submit" name="submit-btn" value="Submit">
-      </div>
-    </fieldset>
-  </form>
-
+<script type="text/javascript" src="script.js"></script>	
 </body>
 </html>

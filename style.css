@@ -113,12 +113,17 @@ body {
   cursor: pointer;
 }
 
-.questionnaire p,
+.questionnaire span {
+  font-weight: bold;
+  margin: 20px 0;
+  display: block;
+}
+
 .questionnaire strong {
   font-weight: bold;
 }
 
-.questionnaire p.description {
+.questionnaire [class*="description"] {
   font-weight: normal;
   color: #777;
   font-size: 0.85em;
@@ -150,7 +155,7 @@ body {
   color: rgba(0,0,0,0.4);
 }
 
-.questionnaire .multiple-choice {
+.questionnaire .multiple-choice label {
   display: block;
   margin: 32px 0;
 }
