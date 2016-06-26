@@ -27,21 +27,23 @@
 
       for ( var j = 0; j < questionElements.length; j++ ) {
         var questionObj = {},
-            answers,
-            answerNum;
+            answers = questionElements[j].querySelectorAll('[class*="answer"]'),
+            answerNum = answers.length;
 
         questionObj.qText = trimSpaces(questionElements[j].querySelector('.question-text').textContent);
         questionObj.qAnswer = [];
-        answers = questionElements[j].querySelectorAll('[class*="answer"]');
-        answerNum = answers.length;
 
-        for ( var k = 0; k < answerNum; k++ ) {
-          if ( answers[k].selected || answers[k].checked ) {
-            questionObj.qAnswer.push(answers[k].value);
+        if (answerNum === 1) {
+          questionObj.qAnswer.push(answers[0].value);
+        } else {
+          for ( var k = 0; k < answerNum; k++ ) {
+            if ( answers[k].selected || answers[k].checked ) {
+              questionObj.qAnswer.push(answers[k].value);
+            }
           }
         }
 
-        //console.log(questionObj);
+        console.log(questionObj);
         cardObj.questions.push(questionObj);
       }
       this.data.cards.push(cardObj);
