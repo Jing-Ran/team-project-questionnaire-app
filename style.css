@@ -50,7 +50,8 @@ body {
   font-size: 1.68em;
 }
 
-.questionnaire input[class*="answer"],
+.questionnaire input[type=text],
+.questionnaire input[type=email],
 .questionnaire textarea {
   width: 100%;
   padding: 10px;
