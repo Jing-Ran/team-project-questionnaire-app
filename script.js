@@ -33,13 +33,11 @@
         questionObj.qText = trimSpaces(questionElements[j].querySelector('.question-text').textContent);
         questionObj.qAnswer = [];
 
-        if (answerNum === 1) {
-          questionObj.qAnswer.push(answers[0].value);
-        } else {
-          for ( var k = 0; k < answerNum; k++ ) {
-            if ( answers[k].selected || answers[k].checked ) {
-              questionObj.qAnswer.push(answers[k].value);
-            }
+        for ( var k = 0; k < answerNum; k++ ) {
+          if ( answers[k].selected || answers[k].checked ) {
+            questionObj.qAnswer.push(answers[k].value);
+          } else if ( answerNum === 1 ) {
+            questionObj.qAnswer.push(answers[k].value);
           }
         }
 
