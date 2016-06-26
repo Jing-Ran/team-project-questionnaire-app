@@ -1,5 +1,5 @@
 (function() {
-  var questionnaire = document.getElementById('questionnaire');
+  var questionnaire = document.querySelector('#questionnaire');
 
   function trimSpaces(string) {
     return string.replace(/^\s+/, '').replace(/\s+$/, '');
@@ -9,7 +9,7 @@
     e.preventDefault();
     this.data = {};
     var appTitle = this.querySelector('h1.title').textContent,
-        cardElements = this.getElementsByClassName("questionnaire-card"),
+        cardElements = this.querySelectorAll('.questionnaire-card'),
         cardsNum = cardElements.length;
 
     this.data.appTitle = trimSpaces(appTitle);
@@ -18,19 +18,19 @@
 
     for ( var i = 0; i < cardsNum; i++ ) {
       if ( cardElements[i].getAttribute('disabled') ) continue;
-      var questionElements = cardElements[i].getElementsByClassName('question');
+      var questionElements = cardElements[i].querySelectorAll('.question');
       var cardObj = {};
 
-      cardObj.title = trimSpaces(cardElements[i].getElementsByClassName('title')[0].textContent);
-      cardObj.description = (cardElements[i].getElementsByClassName('.card-description')[0]) ? trimSpaces(cardElements[i].getElementsByClassName('.card-description')[0].textContent) : '';
+      cardObj.title = trimSpaces(cardElements[i].querySelector('.title').textContent);
+      cardObj.description = (cardElements[i].querySelector('.card-description')) ? trimSpaces(cardElements[i].querySelector('.card-description').textContent) : '';
       cardObj.questions = [];
 
-      for (var j = 0; j < questionElements.length; j++) {
+      for ( var j = 0; j < questionElements.length; j++ ) {
         var questionObj = {},
             answers,
             answerNum;
 
-        questionObj.qText = trimSpaces(questionElements[j].getElementsByClassName('question-text')[0].textContent);
+        questionObj.qText = trimSpaces(questionElements[j].querySelector('.question-text').textContent);
         questionObj.qAnswer = [];
         answers = questionElements[j].querySelectorAll('[class*="answer"]');
         answerNum = answers.length;
