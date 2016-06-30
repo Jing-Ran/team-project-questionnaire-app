@@ -70,7 +70,6 @@ body {
 
 .questionnaire textarea {
   font-size: 1em;
-  resize: none;
 }
 
 .questionnaire input[class*="answer"]:focus,
@@ -160,6 +159,7 @@ body {
 .questionnaire .multiple-choice label {
   display: block;
   margin: 32px 0;
+
 }
 
 .questionnaire .dropdown {
@@ -179,3 +179,16 @@ body {
   background-color: #EC407A;
   cursor: pointer;
 }
+
+/*add "invalid" class*/
+.questionnaire input.invalid {
+  border: 1px solid red;
+  border-bottom: 3px solid red;
+}
+
+/*add :invalid pseudo-class*/
+.questionnaire input:invalid {
+  border: 1px solid red;
+  border-bottom: 3px solid red;
+}
+
