@@ -13,49 +13,40 @@
 
     // check full-name validation:
 
-    //check email validation:
+    //Modified check email validation:
     for (var i = 0; i < emails.length; i++) {
       
       var currentEmail = emails[i].value,
           stringsOfEmail = currentEmail.split("@"),
           beforeAt = stringsOfEmail[0],
           afterAt = stringsOfEmail[1],
-          splitBeforeAt = beforeAt.split(".");
+          splitBeforeAt = beforeAt.split("."),
+          splitAfterAt = afterAt.split(".");
 
-      //Method 1:
       // whether email is an empty string
-      if (currentEmail === "") {
+      if (currentEmail === "") validation = false;
+      // whether has one and only one @ symbol;
+      if (currentEmail.indexOf("@") === -1 || 
+        currentEmail.indexOf("@") !== currentEmail.lastIndexOf("@")) 
         validation = false;
-      }
-      // whether has an @ symbol;
-      if (currentEmail.indexOf("@") === -1) {
-        validation = false;
-      }
-      // whether has more than one @ symbol
-      if (stringsOfEmail.length !== 2) {
-        validation = false;
-      }
       // whether the string before @ is empty, or contains spaces
-      if (beforeAt === "" || beforeAt.indexOf(" ") >= 0) {
-        validation = false;
-      }
-      // check location(s) of dot(s) the string before @ contains dot(s)
+      if (beforeAt === "" || beforeAt.indexOf(" ") >= 0) validation = false;
+      // check location(s) of dot(s) the string before @ 
       for (var j = 0; j < splitBeforeAt.length; j++) {
-        if (splitBeforeAt[j] === "") {
+        if (splitBeforeAt[j] === "" || splitBeforeAt[j] === " ") {
           validation = false;
           break;
         }
       }
       // whether the string after @ is valid
-      if (afterAt === "" || afterAt.indexOf(" ") >= 0 || 
-         afterAt.match(/([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/) === null) {
-        validation = false;
+      if (afterAt === "" || afterAt.indexOf(" ") >= 0) validation = false;
+      if (splitAfterAt.length < 2) validation = false;
+      for (var k = 0; k < splitAfterAt.length; k++) {
+        if (splitAfterAt[k] === "" || splitAfterAt[k] === " ") 
+          validation = false;
+        if (splitAfterAt[splitAfterAt.length - 1].length < 2) 
+          validation = false;
       }
-
-      // Method 2: 
-      // I think regex is the cleanest and most effective way to check validation
-      // I comment this method for now as we haven't officially learned regex
-      // validation = currentEmail.match(/^[^\.@]+(\.[^\.@]+)*@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$/) === null;
 
       // add "invalid" class to invalid input area
       if (!validation) {
@@ -73,6 +64,7 @@
     if (!checkValidation(this)){
       return;
     }
+
     this.data = {};
     var appTitle = this.querySelector('h1.title').textContent,
         cardElements = this.querySelectorAll('.questionnaire-card'),
