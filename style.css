@@ -186,9 +186,14 @@ body {
   border-bottom: 3px solid red;
 }
 
-/*add :invalid pseudo-class*/
-.questionnaire input:invalid {
+/*Edit :invalid pseudo-class*/
+.questionnaire input:invalid:focus {
   border: 1px solid red;
   border-bottom: 3px solid red;
 }
+
+
+
+
+
 
