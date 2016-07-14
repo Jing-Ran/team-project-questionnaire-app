@@ -1,69 +1,90 @@
 (function() {
-  var questionnaire = document.querySelector('#questionnaire');
+  var questionnaire = document.querySelector('#questionnaire'),
+      validator = {},
+      fullName = document.getElementsByClassName("full-name")[0],
+      emailAddress = document.getElementsByClassName("email")[0];
 
   function trimSpaces(string) {
     return string.replace(/^\s+/, '').replace(/\s+$/, '');
   }
 
-  // add checkValidation function
-  function checkValidation(aForm) {
-    var fullNames = aForm.getElementsByClassName("full-name"),
-        emails = aForm.getElementsByClassName("email"),
-        validation = true;
-
-    // check full-name validation:
-
-    //Modified check email validation:
-    for (var i = 0; i < emails.length; i++) {
-      
-      var currentEmail = emails[i].value,
-          stringsOfEmail = currentEmail.split("@"),
-          beforeAt = stringsOfEmail[0],
-          afterAt = stringsOfEmail[1],
-          splitBeforeAt = beforeAt.split("."),
-          splitAfterAt = afterAt.split(".");
-
-      // whether email is an empty string
-      if (currentEmail === "") validation = false;
-      // whether has one and only one @ symbol;
-      if (currentEmail.indexOf("@") === -1 || 
-        currentEmail.indexOf("@") !== currentEmail.lastIndexOf("@")) 
-        validation = false;
-      // whether the string before @ is empty, or contains spaces
-      if (beforeAt === "" || beforeAt.indexOf(" ") >= 0) validation = false;
-      // check location(s) of dot(s) the string before @ 
-      for (var j = 0; j < splitBeforeAt.length; j++) {
-        if (splitBeforeAt[j] === "" || splitBeforeAt[j] === " ") {
-          validation = false;
-          break;
+  // update validation functions
+  // check full-name validation:
+  validator.isFullName = function(name) {
+    var trimmedName = trimSpaces(name),
+        nameArr = name.split(" ");
+    if (nameArr.length >= 2) {
+        for (var i = 0; i < nameArr.length; i++) {
+            if (nameArr[i].length >= 2) {
+                for (var j = 0; j < nameArr[i].length; j++){
+                    if (nameArr[i].charCodeAt(j) >= 48 &&
+                        nameArr[i].charCodeAt(j) <= 57)
+                        return false;
+                }
+            } else {
+                return false;
+            }
         }
-      }
-      // whether the string after @ is valid
-      if (afterAt === "" || afterAt.indexOf(" ") >= 0) validation = false;
-      if (splitAfterAt.length < 2) validation = false;
-      for (var k = 0; k < splitAfterAt.length; k++) {
-        if (splitAfterAt[k] === "" || splitAfterAt[k] === " ") 
-          validation = false;
-        if (splitAfterAt[splitAfterAt.length - 1].length < 2) 
-          validation = false;
-      }
+        return true;
+    }
+    return false;
+  };
 
-      // add "invalid" class to invalid input area
-      if (!validation) {
-        emails[i].classList.add("invalid");
-      } else {
-        emails[i].classList.remove("invalid");
-      }
+  //modify check email validation:
+  validator.isEmail = function(email) {
+    var beforeAt,
+        afterAt,
+        splitBeforeAt,
+        splitAfterAt;
+
+    if (!email) return false;
+
+    if (email.indexOf("@") === -1 ||
+        email.indexOf("@") !== email.lastIndexOf("@")) return false;
+
+    beforeAt = email.split("@")[0];
+    afterAt = email.split("@")[1];
+    splitBeforeAt = beforeAt.split(".");
+    splitAfterAt = afterAt.split(".");
+
+    if (beforeAt === "" || beforeAt.indexOf(" ") >= 0) return false;
+    for (var i = 0; i < splitBeforeAt.length; i++) {
+        if (splitBeforeAt[i] === "" || splitBeforeAt[i] === " ")
+            return false;
+    }
+    if (afterAt === "" || afterAt.indexOf(" ") >=0) return false;
+    if (splitAfterAt.length < 2) return false;
+    for (var j = 0; j < splitAfterAt.length; j++) {
+        if (splitAfterAt[j] === "" || splitAfterAt[j] === " ")
+            return false;
+        if (splitAfterAt[splitAfterAt.length - 1].length < 2) return false;
     }
 
-    return validation;
-  }
+    return true;
+  };
 
   function getInfo(e) {
     e.preventDefault();
-    if (!checkValidation(this)){
+    //call validation check functions
+    if (!validator.isFullName(fullName.value) || 
+      !validator.isEmail(emailAddress.value)) {
+      if (!validator.isFullName(fullName.value)){
+        fullName.classList.add("invalid");
+      } else {
+        fullName.classList.remove("invalid");
+      }
+      if (!validator.isEmail(emailAddress.value)){
+        emailAddress.classList.add("invalid");
+      } else {
+        emailAddress.classList.remove("invalid");
+      }
       return;
+    } else {
+      fullName.classList.remove("invalid");
+      emailAddress.classList.remove("invalid");
     }
+
+      
 
     this.data = {};
     var appTitle = this.querySelector('h1.title').textContent,
