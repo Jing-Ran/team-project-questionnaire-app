@@ -65,7 +65,7 @@
 
   function getInfo(e) {
     e.preventDefault();
-    //call validation check functions
+    //Update: call validation check functions
     if (!validator.isFullName(fullName.value) || 
       !validator.isEmail(emailAddress.value)) {
       if (!validator.isFullName(fullName.value)){
