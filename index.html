@@ -3,7 +3,8 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <form id="questionnaire" name="questionnaire" class="questionnaire">
+  <!-- Turn off autocomplete -->
+  <form id="questionnaire" name="questionnaire" class="questionnaire" autocomplete="off">
     <fieldset name="questionnaire-card" class="questionnaire-card">
       <h1 class="title">
         <strong>Questionnaire</strong> Title
@@ -13,8 +14,7 @@
           <span class="question-text required">
             What are your first and last names?
           </span>
-          <!-- add "full-name" class -->
-          <input type="text" class="short-answer full-name" name="user-name" id="user-name" placeholder="John Doe">
+          <input type="text" class="short-answer full-name" name="user-name" id="user-name" placeholder="John Doe" required>
         </label>
       </div>
 
@@ -23,8 +23,7 @@
           <span class="question-text required">
             What is your email address?
           </span>
-          <!-- add "email" class -->
-          <input type="email" class="short-answer email" name="user-email" id="user-email" placeholder="email@example.com">
+          <input type="text" class="short-answer email" name="user-email" id="user-email" placeholder="email@example.com" required>
         </label>
       </div>
 
@@ -177,6 +176,7 @@
       </div>
     </fieldset>
   </form>
+  <script type="text/javascript" src="./lib/validator.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
