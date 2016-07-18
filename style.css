@@ -180,10 +180,16 @@ body {
   cursor: pointer;
 }
 
-/*add "invalid" class*/
-.questionnaire input.invalid {
-  border: 1px solid red;
-  border-bottom: 3px solid red;
+/*Update "invalid" pseudo-class*/
+.questionnaire input:invalid {
+  border: 1px solid #B71C1C;;
+  border-bottom: 3px solid #B71C1C;;
+}
+
+.questionnaire input[type="text"]:valid,
+.questionnaire input[type="email"]:valid, {
+  border: 1px solid #5E35B1;
+  border-bottom: 3px solid #5E35B1;
 }
 
 
