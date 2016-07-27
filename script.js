@@ -3,8 +3,7 @@
       fullName = document.getElementById("user-name"),
       emailAddress = document.getElementById("user-email"),
       engCharacterSet = {
-        // here we can define properties that are arrays of allowed characters in the string
-        interpunction: [' ', '-'], // there are names with a hypen in them
+        interpunction: [' ', '-'],
         alphabet: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
       };
 
@@ -18,7 +17,7 @@
       console.log("is empty");
       element.setCustomValidity("Required field!");
       element.classList.add('invalid');
-    } else if (!validator.isCharacterSet(value, charSet)) { // check if the letters are from allowed character set
+    } else if (!validator.isCharacterSet(value, charSet)) {
       element.setCustomValidity("Invalid character set! Only english letters, spaces and hyphens are allowed.");
       element.classList.add('invalid');
     } else if ( !validator.isFullName(value) ) {
@@ -79,13 +78,10 @@
             }
           }
         }
-
-        console.log(questionObj);
         cardObj.questions.push(questionObj);
       }
       this.data.cards.push(cardObj);
     }
-
 
     console.log(JSON.stringify(questionnaire.data, null, 2));
   }
