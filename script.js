@@ -1,21 +1,43 @@
 (function() {
   var questionnaire = document.querySelector('#questionnaire'),
       fullName = document.getElementById("user-name"),
-      emailAddress = document.getElementById("user-email");
+      emailAddress = document.getElementById("user-email"),
+      engCharacterSet = {
+        // here we can define properties that are arrays of allowed characters in the string
+        interpunction: [' ', '-'], // there are names with a hypen in them
+        alphabet: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+      };
 
   function trimSpaces(string) {
     return string.replace(/^\s+/, '').replace(/\s+$/, '');
   }
 
-  function checkFullName(element) {
-    var value = element.value;
-    if (validator.isEmpty(value)) {
+  function checkFullName(element, charSet) {
+    var value = trimSpaces(element.value);
+    if ( validator.isEmpty(value) ) {
       console.log("is empty");
-      element.setCustomValidity("Required field");
-    } else if (!validator.isFullName(value)) {
-      element.setCustomValidity("Invalid full name format");
+      element.setCustomValidity("Required field!");
+      element.classList.add('invalid');
+    } else if (!validator.isCharacterSet(value, charSet)) { // check if the letters are from allowed character set
+      element.setCustomValidity("Invalid character set! Only english letters, spaces and hyphens are allowed.");
+      element.classList.add('invalid');
+    } else if ( !validator.isFullName(value) ) {
+      element.setCustomValidity("Invalid full name format! There must be at least two words of length greater than one letter.");
+      element.classList.add('invalid');
     } else {
       element.setCustomValidity("");
+      element.classList.remove('invalid');
+    }
+  }
+
+  function checkEmail(element) {
+    var value = element.value;
+    if ( validator.isEmailAddress(value) ) {
+      element.setCustomValidity('');
+      element.classList.remove('invalid');
+    } else {
+      element.setCustomValidity('Invalid email format!');
+      element.classList.add('invalid');
     }
   }
 
@@ -70,7 +92,7 @@
 
 
   fullName.addEventListener("keyup", function() {
-    checkFullName(this);
+    checkFullName(this, engCharacterSet);
   });
   emailAddress.addEventListener("keyup", function() {
     checkEmail(this);

@@ -181,20 +181,19 @@ body {
 }
 
 /*Update "invalid" pseudo-class*/
-.questionnaire input:invalid {
+
+/* Pseudo class causes the fileds to be styled with red border even on the page load time  */
+/* I think we can do without it, or we can make that JavaScript applies '.invalid' class   */
+/* when the input is not ok, it can be controled better */
+
+.questionnaire input.invalid {
   border: 1px solid #B71C1C;;
   border-bottom: 3px solid #B71C1C;;
 }
-
+/*
 .questionnaire input[type="text"]:valid,
 .questionnaire input[type="email"]:valid, {
   border: 1px solid #5E35B1;
   border-bottom: 3px solid #5E35B1;
 }
-
-
-
-
-
-
-
+*/
