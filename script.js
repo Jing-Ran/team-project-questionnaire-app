@@ -3,7 +3,7 @@
       fullName = document.getElementById("user-name"),
       emailAddress = document.getElementById("user-email"),
       engCharacterSet = {
-        interpunction: [' ', '-'],
+        interpunction: [' ', '-', '\''],
         alphabet: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
       };
 
@@ -53,34 +53,35 @@
     this.data.cards = [];
 
     for ( var i = 0; i < cardsNum; i++ ) {
-      if ( cardElements[i].getAttribute('disabled') ) continue;
-      var questionElements = cardElements[i].querySelectorAll('.question');
-      var cardObj = {};
+      if ( !cardElements[i].getAttribute('disabled') ) {
+        var questionElements = cardElements[i].querySelectorAll('.question');
+        var cardObj = {};
 
-      cardObj.title = trimSpaces(cardElements[i].querySelector('.title').textContent);
-      cardObj.description = (cardElements[i].querySelector('.card-description')) ? trimSpaces(cardElements[i].querySelector('.card-description').textContent) : '';
-      cardObj.questions = [];
+        cardObj.title = trimSpaces(cardElements[i].querySelector('.title').textContent);
+        cardObj.description = (cardElements[i].querySelector('.card-description')) ? trimSpaces(cardElements[i].querySelector('.card-description').textContent) : '';
+        cardObj.questions = [];
 
-      for ( var j = 0; j < questionElements.length; j++ ) {
-        var questionObj = {},
-            answers = questionElements[j].querySelectorAll('[class*="answer"]'),
-            answerNum = answers.length;
+        for ( var j = 0; j < questionElements.length; j++ ) {
+          var questionObj = {},
+              answers = questionElements[j].querySelectorAll('[class*="answer"]'),
+              answerNum = answers.length;
 
-        questionObj.qText = trimSpaces(questionElements[j].querySelector('.question-text').textContent);
-        questionObj.qAnswer = [];
+          questionObj.qText = trimSpaces(questionElements[j].querySelector('.question-text').textContent);
+          questionObj.qAnswer = [];
 
-        if (answerNum === 1) {
-          questionObj.qAnswer.push(answers[0].value);
-        } else {
-          for ( var k = 0; k < answerNum; k++ ) {
-            if ( answers[k].selected || answers[k].checked ) {
-              questionObj.qAnswer.push(answers[k].value);
+          if (answerNum === 1) {
+            questionObj.qAnswer.push(answers[0].value);
+          } else {
+            for ( var k = 0; k < answerNum; k++ ) {
+              if ( answers[k].selected || answers[k].checked ) {
+                questionObj.qAnswer.push(answers[k].value);
+              }
             }
           }
+          cardObj.questions.push(questionObj);
         }
-        cardObj.questions.push(questionObj);
+        this.data.cards.push(cardObj);
       }
-      this.data.cards.push(cardObj);
     }
 
     console.log(JSON.stringify(questionnaire.data, null, 2));
