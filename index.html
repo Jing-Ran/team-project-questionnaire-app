@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="./lib/validator.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
   <!-- Turn off autocomplete -->
@@ -14,7 +16,7 @@
           <span class="question-text required">
             What are your first and last names?
           </span>
-          <input type="text" class="short-answer full-name" name="user-name" id="user-name" placeholder="John Doe" required>
+          <input type="text" class="short-answer full-name" name="user-name" id="user-name" placeholder="John Doe">
         </label>
       </div>
 
@@ -23,7 +25,7 @@
           <span class="question-text required">
             What is your email address?
           </span>
-          <input type="text" class="short-answer email" name="user-email" id="user-email" placeholder="email@example.com" required>
+          <input type="text" class="short-answer email" name="user-email" id="user-email" placeholder="email@example.com">
         </label>
       </div>
 
@@ -176,7 +178,5 @@
       </div>
     </fieldset>
   </form>
-  <script type="text/javascript" src="./lib/validator.js"></script>
-  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

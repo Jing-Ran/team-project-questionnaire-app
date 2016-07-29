@@ -180,8 +180,8 @@ body {
   cursor: pointer;
 }
 
-.questionnaire input.invalid {
-  border: 1px solid #B71C1C;;
-  border-bottom: 3px solid #B71C1C;;
+#questionnaire input:invalid {
+  border: 1px solid #B71C1C;
+  border-bottom: 3px solid #B71C1C;
+  box-shadow: none;
 }
-

@@ -1,4 +1,4 @@
-(function() {
+window.addEventListener('load', function() {
   var questionnaire = document.querySelector('#questionnaire'),
       fullName = document.getElementById("user-name"),
       emailAddress = document.getElementById("user-email"),
@@ -16,16 +16,12 @@
     if ( validator.isEmpty(value) ) {
       console.log("is empty");
       element.setCustomValidity("Required field!");
-      element.classList.add('invalid');
     } else if (!validator.isCharacterSet(value, charSet)) {
       element.setCustomValidity("Invalid character set! Only english letters, spaces and hyphens are allowed.");
-      element.classList.add('invalid');
     } else if ( !validator.isFullName(value) ) {
       element.setCustomValidity("Invalid full name format! There must be at least two words of length greater than one letter.");
-      element.classList.add('invalid');
     } else {
       element.setCustomValidity("");
-      element.classList.remove('invalid');
     }
   }
 
@@ -91,12 +87,11 @@
   fullName.addEventListener("keyup", function() {
     checkFullName(this, engCharacterSet);
   });
+
   emailAddress.addEventListener("keyup", function() {
     checkEmail(this);
   });
 
-  
-
   questionnaire.addEventListener('submit', getInfo);
 
-})();
+});
