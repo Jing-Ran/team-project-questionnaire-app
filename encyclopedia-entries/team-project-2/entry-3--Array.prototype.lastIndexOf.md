@@ -180,6 +180,10 @@ The `lastIndexOf` is added in the 5th edition of ECMAScript standard and it may 
 
 `lastIndexOf` method is well supported in all major browsers. In IE it is supported starting from version 9.
 
+## Finally
+
+You can see an interactive example on [this link](http://moderndeveloper-students.github.io/coursework-Gruximillian/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development/Chapter-02-Introduction-to-CSS/team-project-3-interactive-examples-for-encyclopedia-entries/entry-3-interactive--Array.prototype.lastIndexOf()/).
+
 ___
 
 **Author:** *Vojislav Grujić*  

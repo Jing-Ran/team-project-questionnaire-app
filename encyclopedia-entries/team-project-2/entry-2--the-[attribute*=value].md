@@ -73,6 +73,10 @@ This rule will apply to all `a` elements whose `href` attribute contains `github
 
 This selector is part of the CSS 3 specification. It has good browser support across all major browsers. In IE 8 and earlier, a `<!DOCTYPE>` must be declared for this selector to work.
 
+## Finally
+
+You can see an interactive example on [this link](http://moderndeveloper-students.github.io/coursework-Gruximillian/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development/Chapter-02-Introduction-to-CSS/team-project-3-interactive-examples-for-encyclopedia-entries/entry-2-interactive--[attribute*=value]/).
+
 ___
 
 **Author:** *Vojislav Grujić*  

@@ -103,6 +103,10 @@ CSS:
 
 There were [examples](http://getbootstrap.com/2.3.2/base-css.html#icons) and [discussions](http://stackoverflow.com/questions/14815626/what-is-the-proper-use-case-for-html-i-element) on the web where the `<i>` element is used to insert icons on the page. The authors of those websites are using this element because its name resembles most closely the name "icon" and because of its shortness it is handier to use. However, that kind of usage is highly inappropriate and semantically incorrect. Good news are that this practice is becoming less used, and the websites that were using this practice are now abandoning it.
 
+## Finally
+
+You can see an interactive example on [this link](http://moderndeveloper-students.github.io/coursework-Gruximillian/Course-06-Introduction-to-JavaScript-and-Modern-Web-Development/Chapter-02-Introduction-to-CSS/team-project-3-interactive-examples-for-encyclopedia-entries/entry-1-interactive--%3Ci%3E-element/).
+
 ___
 
 **Author:** *Vojislav Grujić*  
