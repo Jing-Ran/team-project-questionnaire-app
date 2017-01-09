@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #ccc;
+  background-color: #ddd;
   font-size: 16px;
 }
 
@@ -32,8 +32,9 @@ a:hover {
   color: #339;
 }
 
-.italic {
+i {
   font-style: italic;
+  color: green;
 }
 
 code {
@@ -41,6 +42,10 @@ code {
   background-color: #eee;
   padding: 2px 5px 0;
   border-radius: 3px;
+}
+
+h1 code {
+  background-color: transparent;
 }
 
 .article-title {
@@ -81,10 +86,26 @@ ul {
   padding: 5px 10px;
   border-radius: 3px;
   color: #fff;
-  box-shadow: 0 -3px 15px -5px #000 inset;
+  box-shadow: 1px 1px 2px 0 #000;
 }
 
 .button:hover {
   background-color: #00a000;
   cursor: pointer;
+}
+
+footer {
+  background-color: #ddd;
+}
+
+footer p {
+  text-align: center;
+  line-height: 100px;
+  margin: 0;
+  color: #888;
+}
+
+.github-logo {
+  width: 30px;
+  vertical-align: middle;
 }

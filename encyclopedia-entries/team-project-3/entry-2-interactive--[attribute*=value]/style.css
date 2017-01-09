@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+body * {
+  font-size: inherit; /* reset all font sizes to 16px */ /* Maybe not needed */
+  /* reset some other styles */
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  color: inherit;
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: purple;
+}
+
+a.space {
+  color: green;
+  background-color: silver;
+}
+
+a.space:hover {
+  color: white;
+  background-color: red;
+}
+
+.article-title {
+  font-size: 2em;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.article-title p {
+  font-size: 1.618em;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 1.6em;
+  margin: 20px 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.article-introduction a {
+  color: green;
+}
+
+.button {
+  display: inline-block;
+  background-color: #008000;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #fff;
+  line-height: 25px;
+}
+
+.button:hover {
+  background-color: #00a000;
+  cursor: pointer;
+}
+
+#selector-editor {
+  margin: 20px 0;
+  padding-top: 30px;
+  display: inline-block;
+  width: 230px;
+  vertical-align: top;
+}
+
+#selector-editor div {
+  margin-bottom: 20px;
+}
+
+#selector-editor select {
+  height: 35px;
+  padding-left: 10px;
+  border: 1px solid #999;
+  background-color: #fff;
+  width: 100%;
+}
+
+#selector-editor p {
+  margin-bottom: 0;
+}
+
+.attribute,
+.tag {
+  color: blue;
+}
+
+.attribute-value {
+  color: purple;
+}
+
+.property {
+  color: red;
+}
+
+.property-value {
+  color: green;
+}
+
+.tag,
+.property,
+.property-value,
+code {
+  font-family: courier, monospace, sans-serif;
+}
+
+#selector-display {
+  margin: 20px 0 20px 100px;
+  width: 500px;
+  white-space: pre-wrap;
+  padding: 15px 30px 0;
+  background-color: #fff;
+  display: inline-block;
+  border: 1px solid #ccc;
+}
+
+#selector-display span {
+  font-family: courier, monospace;
+}
+
+optgroup[disabled] {
+  display: none;
+}
+
+.controls {
+  padding-left: 15%;
+  margin-bottom: 30px;
+  background-color: #dedede;
+}
+
+.result {
+  position: relative;
+}
+
+.result section {
+  padding: 30px;
+  background-color: #dedede;
+  margin-bottom: 30px;
+}
+
+.example-html {
+  width: 65%;
+  display: inline-block;
+}
+
+.example {
+  width: 33%;
+  display: inline-block;
+  margin-left: 15px;
+  position: absolute;
+  right: 0;
+}
+
+footer {
+  background-color: #ddd;
+}
+
+footer p {
+  text-align: center;
+  line-height: 100px;
+  margin: 0;
+  color: #888;
+}
+
+footer a {
+  color: #363;
+}
+
+.github-logo {
+  width: 30px;
+  vertical-align: middle;
+}

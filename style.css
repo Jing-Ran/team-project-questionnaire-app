@@ -50,7 +50,8 @@ body {
   font-size: 1.68em;
 }
 
-.questionnaire input[class*="answer"],
+.questionnaire input[type=text],
+.questionnaire input[type=email],
 .questionnaire textarea {
   width: 100%;
   padding: 10px;
@@ -113,12 +114,17 @@ body {
   cursor: pointer;
 }
 
-.questionnaire p,
+.questionnaire span {
+  font-weight: bold;
+  margin: 20px 0;
+  display: block;
+}
+
 .questionnaire strong {
   font-weight: bold;
 }
 
-.questionnaire p.description {
+.questionnaire [class*="description"] {
   font-weight: normal;
   color: #777;
   font-size: 0.85em;
@@ -150,9 +156,10 @@ body {
   color: rgba(0,0,0,0.4);
 }
 
-.questionnaire .multiple-choice {
+.questionnaire .multiple-choice label {
   display: block;
   margin: 32px 0;
+
 }
 
 .questionnaire .dropdown {
@@ -171,4 +178,10 @@ body {
 .questionnaire .submit:hover {
   background-color: #EC407A;
   cursor: pointer;
+}
+
+#questionnaire input:invalid {
+  border: 1px solid #B71C1C;
+  border-bottom: 3px solid #B71C1C;
+  box-shadow: none;
 }

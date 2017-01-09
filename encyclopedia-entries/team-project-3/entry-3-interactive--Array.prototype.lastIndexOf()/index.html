@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Example - Array.prototype.lastIndexOf method</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="../lib/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="article-title">
+      Encyclopedia Interactive Example
+      <p><code>Array.prototype.lastIndexOf()</code></p>
+      JavaScript method
+    </h1>
+
+    <section class="article-introduction">
+
+      <h2 class="section-title">Brief description</h2>
+
+      <p>The <code>Array.prototype.lastIndexOf()</code> JavaScript method is used to find the last position in the array where an element appears. If the element is found it returns the last index where the element is found, if the element does not exist in the array this method returns value <code>-1</code>.</p>
+
+      <p>The syntax for using this method is following:</p>
+      <code>variableMix.lastIndexOf(element, fromIndex)</code>
+      <p>where:</p>
+      <ul>
+        <li><code>variableMix</code> - name of the array.</li>
+        <li><code>element</code> - a <span class="italic bold">string</span>, <span class="italic bold">number</span> or <span class="italic bold">boolean</span>. This is the element to be found, if you search for strings, this should be enclosed in quotes. This parameter is <span class="alert">required</span>.</li>
+        <li><code>fromIndex</code> - an <span class="italic bold">integer</span>. This is the index from which to start searching backwards through the array. This parameter is <span class="info">optional</span>.</li>
+      </ul>
+
+      <p>Read more about this method in the following <a href="https://github.com/Jing-Ran/team-project-questionnaire-app/blob/master/encyclopedia-entries/team-project-2/entry-3--Array.prototype.lastIndexOf.md">article</a>.</p>
+
+    </section> <!-- End ".article-introduction" -->
+
+    <section class="interactive-example">
+
+      <h2 class="section-title">Example</h2>
+
+      <section class="example-description">
+        <p>You are presented with an array containing different values and types of values. Under each array item you can see the array index in square brackets, corresponding to that item.</p>
+        <p>Under the array there is a input control where you can edit the parameters for <code>lastIndexOf</code> method and then apply the method on the array. After applying the method, the item returned by it is marked in the array presentation. You may wish to try to determine what will the output item be before applying the method, to see if you have learned how the method works.</p>
+      </section> <!-- End ".example-description" -->
+
+      <section class="array-presentation">
+        <h3><span class="italic">"variableMix"</span> array: <input id="reset" class="button" type="button" value="Reset array"></h3>
+
+        <ul class="example-array">
+          <li>[</li>
+          <li><span class="array-item">3</span><span class="array-index">[0]</span></li>
+          <li><span class="array-item">true</span><span class="array-index">[1]</span></li>
+          <li><span class="array-item">9</span><span class="array-index">[2]</span></li>
+          <li><span class="array-item">2</span><span class="array-index">[3]</span></li>
+          <li><span class="array-item">'howdy!'</span><span class="array-index">[4]</span></li>
+          <li><span class="array-item">8</span><span class="array-index">[5]</span></li>
+          <li><span class="array-item">1</span><span class="array-index">[6]</span></li>
+          <li><span class="array-item">'true'</span><span class="array-index">[7]</span></li>
+          <li><span class="array-item">A</span><span class="array-index">[8]</span></li>
+          <li><span class="array-item">8</span><span class="array-index">[9]</span></li>
+          <li><span class="array-item">2</span><span class="array-index">[10]</span></li>
+          <li><span class="array-item">9</span><span class="array-index">[11]</span></li>
+          <li><span class="array-item">true</span><span class="array-index">[12]</span></li>
+          <li><span class="array-item">8</span><span class="array-index">[13]</span></li>
+          <li><span class="array-item">3</span><span class="array-index">[14]</span></li>
+          <li><span class="array-item">'3'</span><span class="array-index">[15]</span></li>
+          <li>]</li>
+        </ul>
+
+      </section> <!-- End ".array-presentation" -->
+
+      <section class="controls">
+        <code>variableMix.lastIndexOf(</code>
+        <span>
+          <input id="array-element" class="parameters" type="text" required placeholder="enter value...">, 
+          <span class="tooltip">
+            Enter string, boolean or number. <br>
+            Strings may be entered with or without quotes. Numbers and booleans must be entered without quotes, otherwise they are treated as strings.
+          </span>
+        </span>
+        <span>
+          <input id="index-from" class="parameters" type="number">
+          <span class="tooltip">
+            Enter integer here.<br>
+            If string is entered or the filed is empty then the search will start from the end of the array.
+          </span>
+          <span class="tooltip-invalid">
+            Only numbers please!<br>
+            Invalid values will cause the search to be performed from the end of the array.<br>
+            Firefox users should not enter the "+" sign in front of positive numbers.
+          </span>
+        </span>
+        <code>)</code>
+        <p>
+          <input id="search" class="button" type="button" value="Search">
+        </p>
+      </section> <!-- End ".controls" -->
+
+      <section class="result">
+        <div id="empty-element"><p>No element selected! Please try again.</p></div>
+        <div id="bad-start-index">
+          <p>Can't search from indexes lower than 0!</p>
+          <ul>
+            <li>Starting index is: <span class="index-start"></span>.</li>
+          </ul>
+        </div>
+        <div id="not-found">
+          <p>Element <span class="element"></span> is not found in the array!</p>
+          <ul>
+            <li>Starting index is: <span class="index-start"></span>.</li>
+          </ul>
+        </div>
+        <div id="found">
+          <p>Found element <span class="element"></span>!</p>
+          <ul>
+            <li>Found on index: <span class="index-found"></span>.</li>
+            <li>Starting index is: <span class="index-start"></span>.</li>
+          </ul>
+        </div>
+      </section>
+
+    </section> <!-- End ".interactive-example" -->
+
+  <footer>
+    <p><a href="https://github.com/Jing-Ran/team-project-questionnaire-app/tree/master/encyclopedia-entries/team-project-3/entry-3-interactive--Array.prototype.lastIndexOf()" target="_blank"><img class="github-logo" src="../img/github.png" alt="github logo"></a> You can find the source code for this project on <a href="https://github.com/Jing-Ran/team-project-questionnaire-app/tree/master/encyclopedia-entries/team-project-3/entry-3-interactive--Array.prototype.lastIndexOf()" target="_blank">GitHub</a>.</p>
+  </footer>
+
+  </div> <!-- End ".container" -->
+</body>
+
+</html>
