@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
   function checkFullName(element, charSet) {
     var value = trimSpaces(element.value);
     if ( validator.isEmpty(value) ) {
-      console.log("is empty");
+      // console.log("is empty");
       element.setCustomValidity("Required field!");
     } else if (!validator.isCharacterSet(value, charSet)) {
       element.setCustomValidity("Invalid character set! Only english letters, spaces and hyphens are allowed.");
